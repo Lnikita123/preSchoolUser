@@ -13,14 +13,14 @@ const Team = () => {
     },
     {
       id: "rhythm",
-      Heading: "ActKidz",
+      Heading: "Savanaah",
       Edu: "(M.Ed.)",
       Image1: "/T2.png",
     },
 
     {
       id: "improv",
-      Heading: "ActKidz",
+      Heading: "Savanaah",
       Edu: "Neurologist",
       Image1: "/T3.png",
     },
@@ -50,7 +50,7 @@ const Team = () => {
   };
   return (
     <>
-      <div className="lg:bg-[#267EC4] lg:mt-[4rem] lg:h-[35rem] mt-[2rem]">
+      <div className="bg-[#267EC4] lg:mt-[4rem] lg:h-[35rem] mt-[2rem]">
         <div className="flex flex-col items-center space-y-2">
           <p
             className=" hidden lg:flex lg:text-base text-xl font-bold lg:font-medium text-white lg:pt-[4rem] pt-[2rem]"
@@ -62,7 +62,8 @@ const Team = () => {
             className=" hidden lg:flex text-base text-center text-white lg:text-xl lg:font-bold lg:mt-0 mt-[2rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Guiding the way to vibrant creativity and personal growth at ActKidz
+            Guiding the way to vibrant creativity and <br />
+            personal growth at ActKidz
           </h1>
         </div>
         {/* for mobile */}
@@ -76,7 +77,7 @@ const Team = () => {
               <img
                 src={activity.Image1}
                 alt={activity.Heading}
-                className="w-[14rem] rounded-t-lg h-[10rem] mt-[2rem]"
+                className="w-[14rem] rounded-t-lg h-[10rem] "
               />
               <div className="p-3">
                 <h1 className="text-xl text-[#000] font-open-sans font-semibold">
@@ -91,15 +92,15 @@ const Team = () => {
         </div>
       </div>
       <div
-        className="lg:hidden mt-[2rem] "
-        style={{
-          background:
-            " linear-gradient(180deg, #0568EC 39.4%, rgba(5, 104, 236, 0.00) 85.96%)",
-        }}
+        className="lg:hidden mt-[2rem] bg-[#267EC4] "
+        // style={{
+        //   background:
+        //     " linear-gradient(180deg, #0568EC 39.4%, rgba(5, 104, 236, 0.00) 85.96%)",
+        // }}
       >
         <div className="flex flex-col items-center space-y-2">
           <p
-            className="lg:text-base text-xl font-bold lg:font-medium text-white lg:pt-[4rem] pt-[2rem]"
+            className="lg:text-base text-2xl font-bold lg:font-medium text-white lg:pt-[4rem] pt-[2rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Our Team members
@@ -113,7 +114,10 @@ const Team = () => {
         </div>
         <Slider {...sliderSettings}>
           {activities.map((activity) => (
-            <div key={activity.id} className="m-4 rounded-lg shadow-lg ">
+            <div
+              key={activity.id}
+              className="m-4 h-[17rem] w-[16rem] bg-white rounded-lg shadow-lg "
+            >
               <img
                 src={activity.Image1}
                 alt={activity.Heading}

@@ -9,7 +9,7 @@ import { useActingStore } from "../store/useActingStore";
 import Enquire from "../Enquire";
 const Contact = () => {
   const [image, setImage] = useState("");
-  const address = useActingStore((s) => s.address);
+
   const setAddress = useActingStore((s) => s.setAddress);
   const [published, setPublished] = useState(false);
   const getAboutData = async () => {
@@ -55,7 +55,7 @@ const Contact = () => {
   //   }
   return (
     <>
-      <div className="flex flex-col lg:flex-row mt-[4rem] justify-center space-x-14 lg:space-x-24 lg:mt-[2rem]  ">
+      <div className="flex flex-col lg:flex-row mt-[8rem] justify-center space-x-14 lg:space-x-24 lg:mt-[2rem]  ">
         <div className="relative">
           <img
             className="h-[350px] w-full"

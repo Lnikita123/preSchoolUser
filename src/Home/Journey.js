@@ -43,7 +43,7 @@ const Journey = () => {
               <label className="inline-flex items-center">
                 <input
                   type="checkbox"
-                  className="text-red-500 rounded form-checkbox"
+                  className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
                   Play Group
@@ -53,7 +53,7 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2">
                 <input
                   type="checkbox"
-                  className="text-red-500 rounded form-checkbox"
+                  className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
                   Nursery
@@ -64,7 +64,7 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2">
                 <input
                   type="checkbox"
-                  className="text-red-500 rounded form-checkbox"
+                  className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
                   LKG
@@ -74,7 +74,7 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2">
                 <input
                   type="checkbox"
-                  className="text-red-500 rounded form-checkbox"
+                  className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
                   UKG

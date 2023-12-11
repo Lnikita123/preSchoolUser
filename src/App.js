@@ -9,15 +9,21 @@ import Admissions from "./Admission/Admissions";
 import Program from "./Programs/Program";
 import Curriculumpage from "./Curriculum/CurriculumPage";
 import Contact from "./Contact/Contact";
+import { useActingStore } from "./store/useActingStore";
 function App() {
+  const isMobileMenuOpen = useActingStore((s) => s.isMobileMenuOpen);
   return (
     <>
       <Router>
         <ToastContainer className="!z-[9999]" />
-        <div>
+        <div className="flex flex-col lg:items-center ">
           <Navbar />
-          {/* {!isMobileMenuOpen && ( */}
-          <>
+
+          <div
+            className={`${
+              isMobileMenuOpen ? "blur-sm pointer-events-none " : ""
+            }`}
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -27,7 +33,7 @@ function App() {
               <Route path="/Contact" element={<Contact />} />
             </Routes>
             <Footer />
-          </>
+          </div>
           {/* )} */}
         </div>
       </Router>

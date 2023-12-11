@@ -4,9 +4,8 @@ import axios from "axios";
 
 import { API_BASE_URL } from "../config";
 import Enquire from "../Enquire";
-import Play from "./Play";
+
 const Program = () => {
-  const [showPlay, setShowPlay] = useState(false);
   const [image, setImage] = useState("");
   const [published, setPublished] = useState(false);
   const getAboutData = async () => {
@@ -21,16 +20,14 @@ const Program = () => {
   useEffect(() => {
     getAboutData();
   }, []);
-  const handleImageClick = () => {
-    setShowPlay(true);
-  };
+
   return (
     <div>
       <div
         style={{
           backgroundImage: published ? `url(${image})` : `url('program.svg')`,
         }}
-        className="lg:flex flex-col items-center justify-center bg-cover lg:w-full w-auto h-[229px] lg:h-[500px] lg:mt-0 mt-[4rem]"
+        className="lg:flex flex-col items-center justify-center bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
@@ -42,16 +39,52 @@ const Program = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 ">
-        <img
-          className="h-[20rem] cursor-pointer"
-          src="/play1.png"
-          alt="play"
-          onClick={handleImageClick} // Set up the click handler here
-        />
-        <img className=" h-[20rem]" src="/play1.png" alt="play" />
-        <img className=" h-[20rem]" src="/play1.png" alt="play" />
-        <img className=" h-[20rem]" src="/play1.png" alt="play" />
+      <div className="grid justify-center grid-cols-2 lg:flex lg:grid-cols-3 lg:mt-[4rem]">
+        <div className="relative">
+          <img className="h-[20rem]" src="/play1.svg" alt="play" />
+          <p className="absolute p-4 text-white left-8 bottom-10">
+            <span
+              className="border-b border-[#fff]"
+              style={{ fontFamily: "Englebert, cursive" }}
+            >
+              play group
+            </span>
+          </p>
+        </div>
+        <div className="relative">
+          <img className="h-[20rem]" src="/play2.svg" alt="play" />
+          <p className="absolute p-4 text-white left-8 bottom-10">
+            <span
+              className="border-b border-[#fff]"
+              style={{ fontFamily: "Englebert, cursive" }}
+            >
+              Nursery
+            </span>
+          </p>
+        </div>
+
+        <div className="relative">
+          <img className="h-[20rem]" src="/play3.svg" alt="play" />
+          <p className="absolute p-4 text-white left-8 bottom-10">
+            <span
+              className="border-b border-[#fff]"
+              style={{ fontFamily: "Englebert, cursive" }}
+            >
+              LKG
+            </span>
+          </p>
+        </div>
+        <div className="relative">
+          <img className="h-[20rem]" src="/play4.svg" alt="play" />
+          <p className="absolute p-4 text-white left-8 bottom-10">
+            <span
+              className="border-b border-[#fff]"
+              style={{ fontFamily: "Englebert, cursive" }}
+            >
+              UKG
+            </span>
+          </p>
+        </div>
       </div>
       <div>
         {" "}

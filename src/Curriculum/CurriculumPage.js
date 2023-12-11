@@ -27,7 +27,7 @@ const Curriculumpage = () => {
             ? `url(${image})`
             : `url('curriculum.svg')`,
         }}
-        className="lg:flex flex-col items-center justify-center bg-cover lg:w-full w-auto h-[229px] lg:h-[500px] lg:mt-0 mt-[4rem]"
+        className="lg:flex flex-col items-center justify-center bg-cover lg:w-fullw-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p

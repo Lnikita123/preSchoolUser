@@ -56,7 +56,7 @@ const Curriculum = () => {
   ];
 
   const CardComponent = ({ item }) => {
-    const pointsArray = item?.points?.split(",");
+    const pointsArray = item?.points?.split(",").map((point) => point.trim());
     return (
       <div
         className={`lg:flex flex-col lg:justify-between ml-[2.4rem] lg:w-[22rem] lg:h-[31rem] w-full h-[21rem] ${item.bgColor} rounded-lg shadow-md text-white `}
@@ -67,7 +67,7 @@ const Curriculum = () => {
           className="w-12 h-12 mt-[2rem] ml-2"
         />
         <h3
-          className="mt-[0.9rem] text-3xl font-normal ml-2"
+          className="ml-2 text-3xl font-normal "
           style={{ fontFamily: "Englebert, cursive" }}
         >
           {item.heading}
@@ -78,14 +78,15 @@ const Curriculum = () => {
         >
           {item.description}
         </p>
-        <p className="text-sm text-[#fff] font-normal ml-2">
-          {pointsArray?.map((point, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && ", "}
-              {point.trim()}
-            </React.Fragment>
-          ))}
-        </p>
+        {pointsArray && (
+          <ol className="ml-4 list-decimal">
+            {pointsArray.map((point, index) => (
+              <li key={index} className="text-sm font-normal">
+                {point}
+              </li>
+            ))}
+          </ol>
+        )}
         <img src={item.photo} alt="P" className="w-full" />
       </div>
     );

@@ -25,7 +25,7 @@ const Play = () => {
         style={{
           backgroundImage: published ? `url(${image})` : `url('play.svg')`,
         }}
-        className="lg:flex flex-col  bg-cover lg:w-full w-auto h-[229px] lg:h-[500px] lg:mt-0 mt-[4rem]"
+        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
