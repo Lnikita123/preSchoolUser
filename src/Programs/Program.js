@@ -27,11 +27,11 @@ const Program = () => {
         style={{
           backgroundImage: published ? `url(${image})` : `url('program.svg')`,
         }}
-        className="lg:flex flex-col items-center justify-center bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
+        className="lg:flex flex-col bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="mx-6 text-2xl text-white font- normal"
+            className="lg:ml-[18rem] text-2xl text-white font- normal"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Our programs

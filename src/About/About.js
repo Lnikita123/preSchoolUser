@@ -29,7 +29,7 @@ const About = () => {
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="flex flex-col items-start lg:mx-[20rem]  text-white justify-center text-2xl font- normal"
+            className="flex flex-col items-start lg:ml-[18rem] text-white justify-center text-2xl font- normal"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             About Us

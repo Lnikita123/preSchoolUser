@@ -5,7 +5,7 @@ const Creative = () => {
   return (
     <>
       <div className="lg:mb-[6rem]">
-        <div className="lg:flex flex-row lg:justify-center mt-[2rem] lg:space-x-16 lg:space-y-4 ">
+        <div className="lg:flex flex-row lg:justify-center mt-[2rem] lg:space-x-16  lg:space-y-4 ">
           <div className="flex flex-col lg:w-[26rem] space-y-6 lg:mx-0 mx-[1rem]">
             <p
               className="text-[#1BBF68] font-medium lg:text-base text-lg mt-[2rem] lg:mt-0"

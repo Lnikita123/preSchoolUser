@@ -26,11 +26,10 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={` w-full fixed z-50 px-6 items-center text-center  py-4 top-0 space-x-32  flex flex-wrap justify-center`}
+        className={`lg:font-englebert font-opensans w-full fixed z-50 px-6 items-center text-center font-medium  py-4 top-0 space-x-32  flex flex-wrap justify-center`}
         style={{
-          fontFamily: "Englebert, cursive",
           background: "#FFF",
-          // boxShadow: "0px 3.84141px 20.35947px 0px rgba(5, 104, 236, 0.13)",
+          //boxShadow: "0px 3.84141px 20.35947px 0px rgba(5, 104, 236, 0.13)",
         }}
       >
         <Link to="/" onClick={() => handleNavClick("Home")}>
@@ -103,18 +102,18 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-[5rem] w-72 bg-gray-50 shadow-lg transition-transform transform ${
+          className={`lg:hidden absolute top-[5rem] w-80 bg-gray-50 shadow-lg transition-transform transform ${
             isMobileMenuOpen ? "right-0 rounded-xl" : "translate-x-full"
           }`}
         >
           {isMobileMenuOpen && (
-            <ul className="z-50 flex w-full p-6 bg-white rounded-xl">
+            <ul className="z-50 flex w-full px-[10rem] bg-white rounded-xl">
               <div>
-                <div>
+                {/* <div>
                   <img src="/prelogo.svg" alt="im" />
-                </div>
+                </div> */}
               </div>
-              <div className="flex flex-col justify-end text-lg font-bold text-right">
+              <div className="flex flex-col justify-end text-2xl font-bold text-end ">
                 <li className="flex self-end py-2 pl-3 text-[#2A2A2A] rounded">
                   <RxCross2 size={24} onClick={toggleMobileMenu} />
                 </li>

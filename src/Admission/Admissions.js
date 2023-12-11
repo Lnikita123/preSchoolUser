@@ -25,11 +25,11 @@ const Admissions = () => {
         style={{
           backgroundImage: published ? `url(${image})` : `url('admission.svg')`,
         }}
-        className="lg:flex flex-col items-center justify-center bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
+        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col ">
           <p
-            className="text-2xl text-white lg:mx-6 font- normal"
+            className="text-2xl text-white font- normal lg:ml-[18rem]"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Admissions

@@ -3,12 +3,12 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div>
+      <div className="lg:mt-[1rem] mt-[6rem]">
         <img className="" src="/hero.png" alt="img" />
       </div>
       <div className="flex flex-col space-x-4 space-y-4 lg:justify-center lg:flex-row lg:space-y-0">
         <div className="flex flex-row space-x-4">
-          <div className="flex justify-center items-center w-[5rem] h-[5rem]  bg-[#FFF4E4] rounded-full ">
+          <div className="flex justify-center items-center w-[5rem] h-[5rem] mx-auto bg-[#FFF4E4] rounded-full ">
             <div>
               <img src="/img1.png" alt="i" className="w-[3rem] h-[3rem]" />
             </div>

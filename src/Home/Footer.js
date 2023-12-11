@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="hidden lg:flex">
         <img className="w-full" src="/Vector.svg" alt="img" />
       </div>
-      <div className="flex-row items-start justify-center hidden px-6 space-x-32 lg:flex">
+      <div className="flex-row items-start justify-center hidden px-6 space-x-24 lg:flex">
         <div>
           <div className="flex mt-[0.2rem] ">
             <a href="/" className="flex items-center space-x-4">
@@ -29,16 +29,19 @@ const Footer = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/Gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="/career">career</a>
-            </li>
-            <li>
               <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="/contactUs">Contact Us</a>
+              <a href="/Admissions">Admissions</a>
+            </li>
+            <li>
+              <a href="/Program">Programs</a>
+            </li>
+            <li>
+              <a href="/Curriculumpage">Curriculum</a>
+            </li>
+            <li>
+              <a href="/Contact">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -114,21 +117,25 @@ const Footer = () => {
         <div className="flex flex-row space-x-10">
           <div className="">
             <h4 className="text-[#000] font-bold mb-4">Links</h4>
-            <ul className="leading-8 text-[#000] lg:mt-[25px] font-normal text-xs font-Lato">
+            <ul className="leading-8 text-[#000] lg:mt-[25px] font-normal text-base font-Lato">
               <li>
                 <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/Gallery">Gallery</a>
-              </li>
-              <li>
-                <a href="/career">career</a>
               </li>
               <li>
                 <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="/contactUs">ContactUs</a>
+                <a href="/Admissions">Admissions</a>
+              </li>
+              <li>
+                <a href="/Program">Programs</a>
+              </li>
+
+              <li>
+                <a href="/Curriculumpage">Curriculum</a>
+              </li>
+              <li>
+                <a href="/Contact">ContactUs</a>
               </li>
             </ul>
           </div>
