@@ -59,7 +59,7 @@ const Curriculum = () => {
     const pointsArray = item?.points?.split(",").map((point) => point.trim());
     return (
       <div
-        className={`lg:flex flex-col lg:justify-between ml-[2.4rem] lg:w-[22rem] lg:h-[31rem] w-full h-[21rem] ${item.bgColor} rounded-lg shadow-md text-white `}
+        className={`lg:flex flex-col lg:justify-between  xl:mx-[0.4rem] lg:w-[22rem] lg:h-[31rem] w-full h-[21rem] ${item.bgColor} rounded-lg shadow-md text-white `}
       >
         <img
           src={item.imgSrc}
@@ -94,15 +94,15 @@ const Curriculum = () => {
 
   return (
     <>
-      <div className="flex-col lg:flex lg:items-center">
+      <div className="flex-col lg:flex xl:items-center xl:ml-0 lg:ml-[8rem]">
         <h1
-          className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem]"
+          className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem] mx-[2rem] lg:mx-0"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Curriculum is a plan for learning
         </h1>
         <p
-          className="lg:text-sm lg:mx-0 mx-6 text-base font-medium  lg:text-black text-[#62677F] mt-[0.8rem] lg:w-[69rem]"
+          className="lg:text-sm mx-[2rem] lg:mx-0 text-base font-medium  lg:text-black text-[#62677F] mt-[0.8rem] lg:w-[69rem]"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Our curriculum is a comprehensive child-centric curriculum that comes
@@ -114,7 +114,7 @@ const Curriculum = () => {
           </p>
         </p>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-4 mt-[4rem] lg:flex lg:justify-center">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-4 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[6.5rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}

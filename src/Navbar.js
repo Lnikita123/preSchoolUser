@@ -84,7 +84,7 @@ const Navbar = () => {
           </Link>
           <Link to="/Contact" onClick={() => handleNavClick("Contact")}>
             <button
-              className="rounded-full px-6 py-2 text-white bg-green-500 lg:bg-[#FD0101] text-center text-base font-bold"
+              className="rounded-full px-6 py-2 text-white  bg-[#FD0101] text-center text-base font-bold"
               style={{ boxShadow: "0px 8px 27.7px 0px rgba(253, 1, 1, 0.56)" }}
             >
               Contact us

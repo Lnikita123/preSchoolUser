@@ -3,7 +3,7 @@ import React from "react";
 const Journey = () => {
   return (
     <>
-      <div className="flex justify-center space-x-10 lg:space-x-24 lg:mt-[4rem]  ">
+      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-24 lg:mt-[4rem]  ">
         <div>
           <div className="hidden lg:flex">
             <img
@@ -13,32 +13,35 @@ const Journey = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:w-[36rem] lg:mt-8 mt-[2rem] space-y-2">
-          <p
-            className="text-[#FC0101] lg:text-base text-lg font-bold mt-4"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            What we offer
-          </p>
-          <h1
-            className="text-[#2177C0] lg:text-3xl text-2xl font-extrabold"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            A Journey from Playful <br />
-            Playgroup to UKG Wonder
-          </h1>
+        <div className="flex flex-col lg:w-[36rem] lg:mt-8 mt-[2rem] space-y-2 ">
+          <div className="mx-[2rem] lg:mx-0">
+            <p
+              className="text-[#FC0101] lg:text-base text-lg font-bold mt-4"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              What we offer
+            </p>
+            <h1
+              className="text-[#2177C0] lg:text-3xl text-2xl font-extrabold"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              A Journey from Playful <br />
+              Playgroup to UKG Wonder
+            </h1>
+          </div>
+
           <div className="lg:hidden">
-            <img className="w-full lg:h-[19rem]" src="image1.svg" alt="i" />
+            <img className="lg:w-full lg:h-[19rem]" src="img.svg" alt="i" />
           </div>
           <p
-            className="text-[#828282] lg:text-base  text-lg  font-normal"
+            className="text-[#828282] lg:text-base  text-lg  font-normal mx-[2rem] lg:mx-0"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Embark on a whimsical journey from our vibrant Playgroup to the
             enchanting world of UKG. Where discovery meets joy, and learning
             becomes an adventure!
           </p>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start mx-[2rem] lg:mx-0">
             <div className="flex flex-row space-x-8 lg:flex-col lg:space-x-0">
               <label className="inline-flex items-center">
                 <input
