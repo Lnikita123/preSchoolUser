@@ -79,7 +79,7 @@ const Curriculum = () => {
           {item.description}
         </p>
         {pointsArray && (
-          <ol className="ml-4 list-decimal">
+          <ol className="ml-4">
             {pointsArray.map((point, index) => (
               <li key={index} className="text-sm font-normal">
                 {point}

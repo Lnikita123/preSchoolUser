@@ -84,7 +84,7 @@ const Navbar = () => {
           </Link>
           <Link to="/Contact" onClick={() => handleNavClick("Contact")}>
             <button
-              className="rounded-full px-6 py-2 text-white bg-[#FD0101] text-center text-base font-bold"
+              className="rounded-full px-6 py-2 text-white bg-green-500 lg:bg-[#FD0101] text-center text-base font-bold"
               style={{ boxShadow: "0px 8px 27.7px 0px rgba(253, 1, 1, 0.56)" }}
             >
               Contact us
@@ -102,12 +102,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-[5rem] w-80 bg-gray-50 shadow-lg transition-transform transform ${
+          className={`lg:hidden absolute top-[5rem] w-64 bg-gray-50 shadow-lg transition-transform transform ${
             isMobileMenuOpen ? "right-0 rounded-xl" : "translate-x-full"
           }`}
         >
           {isMobileMenuOpen && (
-            <ul className="z-50 flex w-full px-[10rem] bg-white rounded-xl">
+            <ul className="z-50 flex w-full p-4 bg-white rounded-xl">
               <div>
                 {/* <div>
                   <img src="/prelogo.svg" alt="im" />

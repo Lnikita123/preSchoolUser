@@ -42,7 +42,7 @@ const Program = () => {
       <div className="grid justify-center grid-cols-2 lg:flex lg:grid-cols-3 lg:mt-[4rem]">
         <div className="relative">
           <img className="h-[20rem]" src="/play1.svg" alt="play" />
-          <p className="absolute p-4 text-white left-8 bottom-10">
+          <p className="absolute p-4 text-white left-8 bottom-14">
             <span
               className="border-b border-[#fff]"
               style={{ fontFamily: "Englebert, cursive" }}
@@ -53,7 +53,7 @@ const Program = () => {
         </div>
         <div className="relative">
           <img className="h-[20rem]" src="/play2.svg" alt="play" />
-          <p className="absolute p-4 text-white left-8 bottom-10">
+          <p className="absolute p-4 text-white left-8 bottom-14">
             <span
               className="border-b border-[#fff]"
               style={{ fontFamily: "Englebert, cursive" }}
@@ -65,7 +65,7 @@ const Program = () => {
 
         <div className="relative">
           <img className="h-[20rem]" src="/play3.svg" alt="play" />
-          <p className="absolute p-4 text-white left-8 bottom-10">
+          <p className="absolute p-4 text-white left-8 bottom-14">
             <span
               className="border-b border-[#fff]"
               style={{ fontFamily: "Englebert, cursive" }}
@@ -76,7 +76,7 @@ const Program = () => {
         </div>
         <div className="relative">
           <img className="h-[20rem]" src="/play4.svg" alt="play" />
-          <p className="absolute p-4 text-white left-8 bottom-10">
+          <p className="absolute p-4 text-white left-8 bottom-14">
             <span
               className="border-b border-[#fff]"
               style={{ fontFamily: "Englebert, cursive" }}
