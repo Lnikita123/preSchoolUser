@@ -96,7 +96,7 @@ const Curriculum = () => {
     <>
       <div className="flex-col lg:flex xl:items-center xl:ml-0 lg:ml-[8rem]">
         <h1
-          className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem] mx-[2rem] lg:mx-0"
+          className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem] mx-[1rem] lg:mx-0"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Curriculum is a plan for learning
