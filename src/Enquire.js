@@ -38,7 +38,7 @@ const Enquire = () => {
                 id="name"
                 name="name"
                 placeholder="Child Name"
-                className="px-4 py-2 text-black border border-white rounded-lg "
+                className="px-10 py-3 text-black border border-white rounded-lg"
                 style={{ Background: "rgba(255, 255, 255, 0.50)" }}
               />
               <input
@@ -46,7 +46,7 @@ const Enquire = () => {
                 id="name"
                 name="name"
                 placeholder="Parent Name"
-                className="px-4 py-2 text-black border border-white rounded-lg "
+                className="px-12 py-3 text-black border border-white rounded-lg "
                 style={{ Background: "rgba(255, 255, 255, 0.50)" }}
               />
             </div>
@@ -56,7 +56,7 @@ const Enquire = () => {
                 id="name"
                 name="name"
                 placeholder="Child Age"
-                className="px-4 py-2 text-black border border-white rounded-lg "
+                className="px-10 py-3 text-black border border-white rounded-lg "
                 style={{ Background: "rgba(255, 255, 255, 0.50)" }}
               />
               <input
@@ -64,7 +64,7 @@ const Enquire = () => {
                 id="name"
                 name="name"
                 placeholder="Phone"
-                className="px-4 py-2 text-black border border-white rounded-lg "
+                className="px-10 py-3 text-black border border-white rounded-lg "
                 style={{ Background: "rgba(255, 255, 255, 0.50)" }}
               />
             </div>
@@ -74,7 +74,7 @@ const Enquire = () => {
             id="name"
             name="name"
             placeholder="Email"
-            className="w-full py-2 text-black border border-white rounded-lg lg:mt-[2rem] px-4"
+            className="w-full py-3 text-black border border-white rounded-lg lg:mt-[2rem] px-4"
             style={{ Background: "rgba(255, 255, 255, 0.50)" }}
           />
           <input
@@ -82,8 +82,8 @@ const Enquire = () => {
             id="name"
             name="name"
             placeholder="Submit"
-            className="w-full py-2 text-white border bg-[#FC0101] border-white rounded-lg lg:mt-[2rem] px-4"
-            style={{ Background: "rgba(255, 255, 255, 0.50)" }}
+            className="w-full py-3 text-white text-center border bg-[#FC0101] border-white rounded-lg lg:mt-[2rem] px-4"
+            // style={{ Background: "rgba(255, 255, 255, 0.50)" }}
           />
         </div>
       </div>
