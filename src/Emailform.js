@@ -74,7 +74,7 @@ const Emailform = () => {
                 id="childName"
                 name="childName"
                 placeholder="Child Name"
-                className="px-12 py-4 text-black border border-white rounded-lg lg:py-2 lg:px-4 lg:bg-white"
+                className="px-4 py-2 text-black border border-white rounded-lg lg:bg-white"
                 style={{
                   background:
                     window.innerWidth < 1024
@@ -87,7 +87,7 @@ const Emailform = () => {
                 id="parentName"
                 name="parentName"
                 placeholder="Parent Name"
-                className="px-4 py-4 text-black border border-white rounded-lg lg:py-2 lg:bg-white"
+                className="px-4 py-2 text-black border border-white rounded-lg lg:bg-white"
                 style={{
                   background:
                     window.innerWidth < 1024
@@ -115,7 +115,7 @@ const Emailform = () => {
                 id="name"
                 name="name"
                 placeholder="Child Age"
-                className="px-4 py-4 text-black border border-white rounded-lg lg:py-2 lg:bg-white"
+                className="px-4 py-2 text-black border border-white rounded-lg lg:bg-white"
                 style={{
                   background:
                     window.innerWidth < 1024
@@ -134,7 +134,7 @@ const Emailform = () => {
                 id="name"
                 name="name"
                 placeholder="Phone"
-                className="px-4 py-4 text-black border border-white rounded-lg lg:py-2 "
+                className="px-4 py-2 text-black border border-white rounded-lg "
                 style={{
                   background:
                     window.innerWidth < 1024
@@ -149,7 +149,7 @@ const Emailform = () => {
             id="name"
             name="name"
             placeholder="Email"
-            className="w-full lg:py-2 py-4 text-black border border-white rounded-lg lg:mt-[2rem] px-4  mt-[1rem]"
+            className="w-full py-2 text-black border border-white rounded-lg lg:mt-[2rem] px-4  mt-[1rem]"
             style={{
               background:
                 window.innerWidth < 1024
@@ -162,7 +162,7 @@ const Emailform = () => {
             id="name"
             name="name"
             placeholder="Submit"
-            className="w-full lg:py-2 py-4 mb-[2rem] text-white border bg-[#FC0101] border-white rounded-lg lg:mt-[4rem] mt-[2rem] text-center"
+            className="w-full py-2  mb-[2rem] text-white border bg-[#FC0101] border-white rounded-lg lg:mt-[4rem] mt-[2rem] text-center"
             // style={{ Background: "rgba(255, 255, 255, 0.50)" }}
           />
         </div>
