@@ -25,11 +25,11 @@ const About = () => {
         style={{
           backgroundImage: published ? `url(${image})` : `url('about.svg')`,
         }}
-        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem] "
+        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[10rem] "
       >
-        <div className="relative lg:mt-[16rem] w-full">
+        <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="absolute bottom-0 left-0 w-full text-center lg:static lg:ml-[18rem] lg:text-left text-white text-2xl font-normal"
+            className="flex flex-col items-start lg:ml-[18rem] text-white justify-center text-2xl font- normal"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             About Us

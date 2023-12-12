@@ -27,11 +27,11 @@ const Curriculumpage = () => {
             ? `url(${image})`
             : `url('curriculum.svg')`,
         }}
-        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
+        className="lg:flex flex-col  bg-cover lg:w-full w-full h-[16rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal"
+            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[6rem]"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Curriculum

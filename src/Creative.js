@@ -5,8 +5,8 @@ const Creative = () => {
   return (
     <>
       <div className="lg:mb-[6rem]">
-        <div className="lg:flex flex-row lg:justify-center mt-[2rem] lg:space-x-16  lg:space-y-4 ">
-          <div className="flex flex-col lg:w-[26rem] space-y-6 lg:mx-0 mx-[1rem]">
+        <div className="lg:flex flex-row lg:justify-center mt-[2rem] xl:space-x-16  lg:space-y-4 mx-[1rem] xl:ml-0 lg:ml-[4rem] ">
+          <div className="flex flex-col lg:w-[26rem] space-y-6 lg:mx-0 mx-[2rem]">
             <p
               className="text-[#1BBF68] font-medium lg:text-base text-lg mt-[2rem] lg:mt-0"
               style={{ fontFamily: "Inter, sans-serif" }}
@@ -24,7 +24,7 @@ const Creative = () => {
               medications for a safe and enjoyable experience.
             </p>
           </div>
-          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[3rem] lg:mt-0">
+          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[3rem] lg:mx-0 mx-[1rem] lg:mt-0">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
               <img
                 className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
@@ -48,7 +48,7 @@ const Creative = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0">
+          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
               <img
                 className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
@@ -73,7 +73,7 @@ const Creative = () => {
             </div>
           </div>
         </div>
-        <div className="lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] 2xl:space-x-16 lg:space-x-0 lg:space-y-4">
+        <div className="mx-[1rem] lg:mx-0 lg:ml-[2rem] xl:ml-0 lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] xl:space-x-16 lg:space-x-0 lg:space-y-4">
           <div className="hidden lg:flex relative lg:w-[28rem] lg:h-[11rem] bg-[#EDFEF6] mt-[4rem]">
             <div className="flex flex-col pl-8 pt-[2rem] z-10">
               <h1 className="font-bold text-black lg:text-xl">
@@ -89,7 +89,7 @@ const Creative = () => {
             </div>
           </div>
 
-          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4  lg:mt-0">
+          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4  lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
               <img
                 className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
@@ -113,7 +113,7 @@ const Creative = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0">
+          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
               <img
                 className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
