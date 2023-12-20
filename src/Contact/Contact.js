@@ -5,61 +5,39 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import { API_BASE_URL } from "../config";
-import { useActingStore } from "../store/useActingStore";
 import Enquire from "../Enquire";
 const Contact = () => {
-  const [image, setImage] = useState("");
-
-  const setAddress = useActingStore((s) => s.setAddress);
-  const [published, setPublished] = useState(false);
-  const getAboutData = async () => {
+  const [slidesData, setSlidesData] = useState({
+    id: 1,
+    Address: "",
+    Email: "",
+    Phone: "",
+    Photo: "",
+    Published: false,
+  });
+  const getContactData = async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}/getcontactpageData`);
-      setImage(response.data.data?.Photo);
-      setAddress(response.data.data?.Address);
-      setPublished(response.data.data?.Published);
+      setSlidesData(response.data.data);
     } catch (e) {
       console.log("err", e);
     }
   };
   useEffect(() => {
-    getAboutData();
+    getContactData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //   const [name, setName] = useState("");
-  //   const [number, setNumber] = useState("");
-  //   const [email, setEmail] = useState("");
-  //   async function sendContactData() {
-  //     try {
-  //       const payload = {
-  //         Name: name,
-  //         Mobile: number,
-  //         Email: email,
-  //       };
-  //       const config = {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       };
-  //       const response = await axios.post(
-  //         `${API_BASE_URL}/userContactData`,
-  //         payload,
-  //         config
-  //       );
-  //       if (response.data.status) {
-  //         toast.success("Email sent successfully");
-  //       }
-  //     } catch (e) {
-  //       console.log("Error:", e);
-  //     }
-  //   }
   return (
     <>
       <div className="flex flex-col lg:flex-row mt-[8rem] justify-center space-x-14 lg:space-x-24 lg:mt-[2rem]  ">
         <div className="relative">
           <img
             className="h-[350px] w-full"
-            src={image && published ? image : "/contact.svg"}
+            src={
+              slidesData?.Photo && slidesData.Published
+                ? slidesData?.Photo
+                : "/contact.svg"
+            }
             alt="Preschool contact"
           />
           <p
@@ -85,7 +63,9 @@ const Contact = () => {
               className="font-normal text-black"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              info@actkidzpreschool.com
+              {slidesData?.Published && slidesData?.Email
+                ? `${slidesData?.Email}`
+                : "info@actkidzpreschool.com"}
             </div>
           </div>
           <div className="flex flex-row space-x-4">
@@ -96,7 +76,9 @@ const Contact = () => {
               className="font-normal text-black"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              +91 86869 83890{" "}
+              {slidesData?.Published && slidesData?.Phone
+                ? `${slidesData?.Phone}`
+                : "+91 86869 83890"}
             </div>
           </div>
           <div className="flex flex-row space-x-4">
@@ -108,7 +90,9 @@ const Contact = () => {
               className="font-normal text-black"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              1-30-22, G R Reddy Nagar, Kapra, ECIL, Hyderabad, Telangana 500062{" "}
+              {slidesData?.Published && slidesData?.Address
+                ? `${slidesData?.Address}`
+                : "1-30-22, G R Reddy Nagar, Kapra, ECIL, Hyderabad, Telangana 500062"}
             </div>
           </div>
         </div>

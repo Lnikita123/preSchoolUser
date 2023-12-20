@@ -1,53 +1,68 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { API_BASE_URL } from "../config";
 
 const Team = () => {
-  const [activities] = useState([
+  const [activities, setActivities] = useState([
     {
       id: "dance",
-      Heading: "Savanaah",
-      Edu: "(M.Ed.)",
-      Image1: "/T1.png",
+      Name: "Savanaah",
+      Education: "(M.Ed.)",
+      Photos: "/T1.png",
     },
     {
       id: "rhythm",
-      Heading: "Savanaah",
-      Edu: "(M.Ed.)",
-      Image1: "/T2.png",
+      Name: "Savanaah",
+      Education: "(M.Ed.)",
+      Photos: "/T2.png",
     },
 
     {
       id: "improv",
-      Heading: "Savanaah",
-      Edu: "Neurologist",
-      Image1: "/T3.png",
+      Name: "Savanaah",
+      Education: "Neurologist",
+      Photos: "/T3.png",
     },
   ]);
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  // let testData = [
+  //   {
+  //     id: 1,
+  //     Name: "",
+  //     Education: "",
+  //     Photos: "",
+  //     Published: false,
+  //   },
+  // ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [slidesData, setSlidesData] = useState(testData);
+  const getFeePrograms = async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/getteacherData`);
+      // setSlidesData(response.data.data);
+      const data = response.data.data;
+      if (Array.isArray(data) && data.length > 0) {
+        setActivities(data);
+        // setSlidesData(data);
+      } else {
+        // setSlidesData(testData);
+        setActivities(activities);
+      }
+    } catch (e) {
+      console.log("err", e);
+    }
   };
+  useEffect(() => {
+    getFeePrograms();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndex + 1) % activities.length);
+    }, 3000); // Change image every 3000 milliseconds (3 seconds)
+
+    return () => clearInterval(interval);
+  }, [activities.length, currentIndex]);
+
   return (
     <>
       <div className="bg-[#267EC4] lg:mt-[4rem] lg:h-[35rem] mt-[2rem]">
@@ -75,28 +90,29 @@ const Team = () => {
               className="m-4 bg-white rounded-lg shadow-lg "
             >
               <img
-                src={activity.Image1}
-                alt={activity.Heading}
+                src={activity.Photos}
+                alt={activity.Name}
                 className="w-[14rem] rounded-t-lg h-[10rem] "
               />
               <div className="p-3">
                 <h1 className="text-xl text-[#000] font-open-sans font-semibold">
-                  {activity.Heading}
+                  {activity.Name}
                 </h1>
                 <p className="text-sm text-[#838383] font-open-sans font-bold lg:mt-[0.6rem]">
-                  {activity.Edu}
+                  {activity.Education}
                 </p>
               </div>
             </div>
           ))}
         </div>
       </div>
+
       <div
-        className="lg:hidden mt-[2rem] bg-[#267EC4] "
-        // style={{
-        //   background:
-        //     " linear-gradient(180deg, #0568EC 39.4%, rgba(5, 104, 236, 0.00) 85.96%)",
-        // }}
+        className="mt-[1.4rem] block lg:hidden overflow-hidden relative"
+        style={{
+          background:
+            "linear-gradient(180deg, #0568EC 0.02%, rgba(5, 104, 236, 0.00) 90.83%)",
+        }}
       >
         <div className="flex flex-col items-center space-y-2">
           <p
@@ -106,34 +122,41 @@ const Team = () => {
             Our Team members
           </p>
           <h1
-            className="text-lg text-center text-white lg:text-xl lg:font-bold lg:mt-0 mt-[2rem]"
+            className="text-lg text-center text-white lg:text-xl lg:font-bold lg:mt-0 mt-[3rem] "
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Guiding the way to vibrant creativity and personal growth at ActKidz
           </h1>
         </div>
-        <Slider {...sliderSettings}>
-          {activities.map((activity) => (
+        <div
+          className="transition-transform duration-300 whitespace-nowrap"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {activities.map((activity, index) => (
             <div
               key={activity.id}
-              className="m-4 h-[17rem] w-[16rem] bg-white rounded-lg shadow-lg "
+              className="inline-block w-full h-full space-x-4"
             >
-              <img
-                src={activity.Image1}
-                alt={activity.Heading}
-                className="w-[16rem]  rounded-lg h-[12rem] "
-              />
-              <div className="px-4 py-2">
-                <h1 className="text-xl text-[#000] font-open-sans font-semibold">
-                  {activity.Heading}
-                </h1>
-                <p className="text-sm text-[#838383] font-open-sans font-bold lg:mt-[0.6rem] pb-[2rem]">
-                  {activity.Edu}
-                </p>
+              <div className="mx-auto w-[255px] bg-white rounded-lg overflow-hidden shadow-lg mt-[2rem]">
+                <img
+                  src={activity.Photos}
+                  alt={activity.Name}
+                  className="w-full h-auto rounded-lg"
+                />
+                <div className="p-3">
+                  <h1 className="text-xl text-[#000] font-open-sans font-semibold">
+                    {activity.Name}
+                  </h1>
+                  <p className="text-sm text-[#838383] font-open-sans font-bold lg:mt-[0.6rem] pb-[2rem]">
+                    {activity.Education}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
     </>
   );

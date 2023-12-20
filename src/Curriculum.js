@@ -59,12 +59,12 @@ const Curriculum = () => {
     const pointsArray = item?.points?.split(",").map((point) => point.trim());
     return (
       <div
-        className={`lg:flex flex-col lg:justify-between  xl:mx-[0.4rem] lg:w-[22rem] lg:h-[31rem] w-full h-[21rem] ${item.bgColor} rounded-lg shadow-md text-white `}
+        className={`lg:flex flex-col lg:justify-between  xl:w-[19rem] lg:w-[19rem] lg:ml-[2rem] lg:min-h-[28rem] w-full min-h-[24rem] ${item.bgColor} rounded-lg shadow-md text-white `}
       >
         <img
           src={item.imgSrc}
           alt={item.heading}
-          className="w-12 h-12 mt-[2rem] ml-2"
+          className="w-12 h-12 mt-[1rem] ml-2 "
         />
         <h3
           className="ml-2 text-3xl font-normal "
@@ -87,40 +87,45 @@ const Curriculum = () => {
             ))}
           </ol>
         )}
-        <img src={item.photo} alt="P" className="w-full" />
+        <img
+          src={item.photo}
+          alt="P"
+          className="w-full mt-[2rem] lg:mt-[0rem]"
+        />
       </div>
     );
   };
 
   return (
     <>
-      <div className="flex-col lg:flex xl:items-center xl:ml-0 lg:ml-[8rem]">
+      <div className="flex-col lg:flex xl:items-center  xl:ml-[8rem]">
         <h1
           className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem] mx-[1rem] lg:mx-0"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Curriculum is a plan for learning
         </h1>
-        <p
-          className="lg:text-sm mx-[2rem] lg:mx-0 text-base font-medium  lg:text-black text-[#62677F] mt-[0.8rem] lg:w-[69rem]"
-          style={{ fontFamily: "Inter, sans-serif" }}
-        >
-          Our curriculum is a comprehensive child-centric curriculum that comes
-          with set objectives in all major areas of development.
-          <p className="justify-center mt-4 lg:mt-0">
-            It is related to the child's developmental readiness, interests,
-            questions, style of learning and the cultural context in which the
-            child finds themself.{" "}
+        <div className="lg:pl-[6rem] xl:pl-0">
+          <p
+            className="lg:text-sm mx-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem]"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            Our curriculum is a comprehensive child-centric curriculum that
+            comes with set objectives in all major areas of development.
+            <p className="justify-center mt-4 lg:mt-0">
+              It is related to the child's developmental readiness, interests,
+              questions, style of learning and the cultural context in which the
+              child finds themselves.
+            </p>
           </p>
-        </p>
+        </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-4 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[6.5rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[6.5rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}
       </div>
 
-      {/* Mobile Carousel Layout */}
       <div className="sm:hidden">
         <Slider {...settings}>
           {data.map((item) => (
