@@ -113,7 +113,7 @@ const Creative = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
+          <div className="flex flex-row lg:flex-col  lg:w-[17rem] xl:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
               <img
                 className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"

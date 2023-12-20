@@ -1,15 +1,18 @@
 import "./App.css";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home/Body";
 import Footer from "./Home/Footer";
 import About from "./About/About";
 import Admissions from "./Admission/Admissions";
-import Program from "./Programs/Program";
+
 import Curriculumpage from "./Curriculum/CurriculumPage";
 import Contact from "./Contact/Contact";
 import { useActingStore } from "./store/useActingStore";
+import Program from "./Program/Program";
+
 function App() {
   const isMobileMenuOpen = useActingStore((s) => s.isMobileMenuOpen);
   return (

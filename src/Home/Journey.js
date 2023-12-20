@@ -3,7 +3,7 @@ import React from "react";
 const Journey = () => {
   return (
     <>
-      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-24 lg:mt-[4rem]  ">
+      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-6 lg:mt-[4rem] xl:ml-0 lg:ml-[2rem]  ">
         <div>
           <div className="hidden lg:flex">
             <img
@@ -13,8 +13,8 @@ const Journey = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:w-[36rem] lg:mt-8 mt-[2rem] space-y-2 ">
-          <div className="mx-[2rem] lg:mx-0">
+        <div className="flex flex-col lg:w-[34rem] w-[30rem] lg:mt-8 mt-[2rem] space-y-2 ">
+          <div className="mx-auto lg:mx-0">
             <p
               className="text-[#FC0101] lg:text-base text-lg font-bold mt-4"
               style={{ fontFamily: "Inter, sans-serif" }}
@@ -34,7 +34,7 @@ const Journey = () => {
             <img className="lg:w-full lg:h-[19rem]" src="img.svg" alt="i" />
           </div>
           <p
-            className="text-[#828282] lg:text-base  text-lg  font-normal mx-[2rem] lg:mx-0"
+            className="text-[#828282] lg:text-base  text-lg text-justify xl:w-[30rem]  font-normal mx-[2rem] lg:mx-0"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Embark on a whimsical journey from our vibrant Playgroup to the

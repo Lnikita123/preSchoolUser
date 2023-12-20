@@ -5,25 +5,30 @@ import axios from "axios";
 import { API_BASE_URL } from "../config";
 import Enquire from "../Enquire";
 const Admissions = () => {
-  const [image, setImage] = useState("");
-  const [published, setPublished] = useState(false);
-  const getAboutData = async () => {
+  const [slidesData, setSlidesData] = useState({
+    id: 1,
+    Description: "",
+    Photo: "",
+    Published: false,
+  });
+  const getAdmissionData = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/getaboutData`);
-      setImage(response.data.data?.Photo);
-      setPublished(response.data.data?.Published);
+      const response = await axios.get(`${API_BASE_URL}/getadmissionData`);
+      setSlidesData(response.data.data);
     } catch (e) {
       console.log("err", e);
     }
   };
   useEffect(() => {
-    getAboutData();
+    getAdmissionData();
   }, []);
   return (
     <div>
       <div
         style={{
-          backgroundImage: published ? `url(${image})` : `url('admission.svg')`,
+          backgroundImage: slidesData?.Published
+            ? `url(${slidesData?.Photo})`
+            : `url('admission.svg')`,
         }}
         className="lg:flex flex-col  bg-cover lg:w-full w-full h-[14rem] lg:h-[500px] lg:mt-[8rem] mt-[8rem]"
       >
@@ -42,10 +47,9 @@ const Admissions = () => {
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           <p>
-            Admission is based on a student’s academic promise and personal
-            qualities. The School is committed to maintaining racial, ethnic,
-            religious, socio-economic and geographic diversity in its student
-            body.
+            {slidesData?.Published && slidesData?.Description
+              ? `${slidesData?.Description}`
+              : "Admission is based on a student’s academic promise and personal qualities The School is committed to maintaining racial, ethnic,religious, socio-economic and geographic diversity in its student body"}
           </p>
         </div>
       </div>

@@ -1,6 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { API_BASE_URL } from "../src/config";
+import { toast } from "react-toastify";
 
 const Enquire = () => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
+  const [parentname, setparentName] = useState("");
+  async function saveUserData(e) {
+    try {
+      const payload = {
+        Name: name,
+        Mobile: number,
+        parentName: parentname,
+        Email: email,
+        Age: age,
+      };
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const response = await axios.post(
+        `${API_BASE_URL}/usercontactHomeData`,
+        payload,
+        config
+      );
+      if (response.data.status) {
+        toast.success("Email sent successfully");
+      }
+    } catch (e) {
+      console.log("Error:", e);
+    }
+  }
   return (
     <>
       <div className="hidden lg:flex flex-col bg-[#1E79C2] lg:mt-[4rem] mt-[3rem] lg:h-[42rem]  items-center">
@@ -36,6 +70,8 @@ const Enquire = () => {
               <input
                 type="text"
                 id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 name="name"
                 placeholder="Child Name"
                 className="px-10 py-3 text-black border border-white rounded-lg"
@@ -44,6 +80,8 @@ const Enquire = () => {
               <input
                 type="text"
                 id="name"
+                value={parentname}
+                onChange={(e) => setparentName(e.target.value)}
                 name="name"
                 placeholder="Parent Name"
                 className="px-12 py-3 text-black border border-white rounded-lg "
@@ -51,18 +89,33 @@ const Enquire = () => {
               />
             </div>
             <div className="flex flex-col space-y-4">
-              <input
+              <select
                 type="text"
                 id="name"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
                 name="name"
                 placeholder="Child Age"
-                className="px-10 py-3 text-black border border-white rounded-lg "
-                style={{ Background: "rgba(255, 255, 255, 0.50)" }}
-              />
+                className="px-4 py-3 text-black border border-white rounded-lg lg:bg-white"
+                style={{
+                  background:
+                    window.innerWidth < 1024
+                      ? "rgba(255, 255, 255, 0.50)"
+                      : "white",
+                }}
+              >
+                <option className="text-black">Child Age</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
               <input
-                type="number"
-                id="name"
-                name="name"
+                type="text"
+                id="phone"
+                name="phone"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
                 placeholder="Phone"
                 className="px-10 py-3 text-black border border-white rounded-lg "
                 style={{ Background: "rgba(255, 255, 255, 0.50)" }}
@@ -71,20 +124,20 @@ const Enquire = () => {
           </div>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="Email"
+            name="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             className="w-full py-3 text-black border border-white rounded-lg lg:mt-[2rem] px-4"
             style={{ Background: "rgba(255, 255, 255, 0.50)" }}
           />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Submit"
+          <button
+            onClick={saveUserData}
             className="w-full py-3 text-white text-center border bg-[#FC0101] border-white rounded-lg lg:mt-[2rem] px-4"
-            // style={{ Background: "rgba(255, 255, 255, 0.50)" }}
-          />
+          >
+            Submit
+          </button>
         </div>
       </div>
       <div className="lg:hidden bg-[#1E79C2] mt-[3rem] lg:mt-[4rem] flex flex-col items-center">
@@ -120,30 +173,45 @@ const Enquire = () => {
             <input
               type="text"
               id="childName"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               name="childName"
               placeholder="Child Name"
               className="px-4 py-2 text-black bg-white border border-white rounded-lg"
               style={{ background: " rgba(255, 255, 255, 0.50)" }}
             />
-            <input
+            <select
               type="text"
-              id="childAge"
-              name="childAge"
+              id="name"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              name="name"
               placeholder="Child Age"
               className="px-4 py-2 text-black bg-white border border-white rounded-lg"
               style={{ background: " rgba(255, 255, 255, 0.50)" }}
-            />
+            >
+              <option className="text-black">Child Age</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+
             <input
               type="text"
               id="parentName"
+              value={parentname}
+              onChange={(e) => setparentName(e.target.value)}
               name="parentName"
               placeholder="Parent Name"
               className="px-4 py-2 text-black bg-white border border-white rounded-lg"
               style={{ background: " rgba(255, 255, 255, 0.50)" }}
             />
             <input
-              type="number"
+              type="text"
               id="phone"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
               name="phone"
               placeholder="Phone number"
               className="px-4 py-2 text-black bg-white border border-white rounded-lg"
@@ -152,13 +220,15 @@ const Enquire = () => {
             <input
               type="email"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               name="email"
               placeholder="Email"
               className="px-4 py-2 text-black bg-white border border-white rounded-lg"
               style={{ background: " rgba(255, 255, 255, 0.50)" }}
             />
             <button
-              type="submit"
+              onClick={saveUserData}
               className="w-full py-2 text-white bg-[#FC0101] border border-white rounded-lg mt-[2rem]"
             >
               Submit
