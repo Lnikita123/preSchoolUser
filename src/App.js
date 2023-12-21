@@ -7,7 +7,6 @@ import Home from "./Home/Body";
 import Footer from "./Home/Footer";
 import About from "./About/About";
 import Admissions from "./Admission/Admissions";
-
 import Curriculumpage from "./Curriculum/CurriculumPage";
 import Contact from "./Contact/Contact";
 import { useActingStore } from "./store/useActingStore";
@@ -21,7 +20,6 @@ function App() {
         <ToastContainer className="!z-[9999]" />
         <div className="flex flex-col lg:items-center ">
           <Navbar />
-
           <div
             className={`${
               isMobileMenuOpen ? "blur-sm pointer-events-none " : ""
@@ -37,7 +35,6 @@ function App() {
             </Routes>
             <Footer />
           </div>
-          {/* )} */}
         </div>
       </Router>
     </>

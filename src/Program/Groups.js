@@ -6,7 +6,6 @@ const Groups = () => {
   const [slideData, setSlideData] = useState({});
   useEffect(() => {
     setSlideData(filteredData);
-    console.log("pro", filteredData);
   }, [filteredData]);
   return (
     <>
