@@ -3,7 +3,7 @@ import React from "react";
 const Journey = () => {
   return (
     <>
-      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-6 lg:mt-[4rem] xl:ml-0 lg:ml-[2rem]  ">
+      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-6 lg:mt-[4rem] lg:ml-[2rem] xl:ml-[4rem]  ">
         <div>
           <div className="hidden lg:flex">
             <img

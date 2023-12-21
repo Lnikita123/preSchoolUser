@@ -4,7 +4,7 @@ import { useActStore } from "../store/useActStore";
 import axios from "axios";
 import { API_BASE_URL } from "../config";
 import { useNavigate } from "react-router-dom";
-import Team from "../Home/Team";
+
 import Groups from "./Groups";
 import { useActingStore } from "../store/useActingStore";
 const Play = () => {
@@ -49,6 +49,7 @@ const Play = () => {
       const response = await axios.get(`${API_BASE_URL}/getaddProgramData`);
       setSlidesData(response.data.data);
       const data = response.data.data;
+      console.log("da", data);
       if (Array.isArray(data) && data.length > 0) {
         setActivities(data);
         setSlidesData(data);
@@ -81,8 +82,8 @@ const Play = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showActing, slidesData]);
   const handleClick = (id) => {
+    setShowActing((prevShowActing) => !prevShowActing);
     setShowData(id);
-    setShowActing(!showActing);
   };
 
   return (
@@ -113,9 +114,6 @@ const Play = () => {
           </div>
         </div>
       )}
-      <div>
-        <Team />
-      </div>
     </>
   );
 };
