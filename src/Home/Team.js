@@ -83,7 +83,7 @@ const Team = () => {
         </div>
         {/* for mobile */}
 
-        <div className="hidden lg:flex  flex-wrap justify-center lg:space-x-16 lg:mt-[2rem] mt-[2rem]">
+        <div className="hidden lg:flex  flex-wrap justify-center lg:mt-[2rem] mt-[2rem]">
           {activities.map((activity) => (
             <div
               key={activity.id}

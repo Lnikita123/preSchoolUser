@@ -1,118 +1,112 @@
 import React, { useEffect, useState } from "react";
-
-import { useActStore } from "../store/useActStore";
 import axios from "axios";
+import { useActStore } from "../store/useActStore";
 import { API_BASE_URL } from "../config";
-import { useNavigate } from "react-router-dom";
 
-import Groups from "./Groups";
-import { useActingStore } from "../store/useActingStore";
-const Play = () => {
-  const navigate = useNavigate();
-  const showActing = useActStore((s) => s.showActing);
-  const setShowActing = useActStore((s) => s.setShowActing);
-  const [activities, setActivities] = useState([
-    {
-      id: "Play1",
-      Heading: "Play Group",
+const Play = ({ slidesData }) => {
+  const { setShowActing } = useActStore((state) => ({
+    showActing: state.showActing,
+    setShowActing: state.setShowActing,
+  }));
 
-      Photos: "/play1.svg",
-    },
-    {
-      id: "Play2",
-      Heading: "Nursery ",
-
-      Photos: "/play2.svg",
-    },
-
-    {
-      id: "Play3",
-      Heading: "LkG",
-
-      Photos: "/play3.svg",
-    },
-  ]);
-  let testData = [
-    {
-      id: 1,
-      Heading: "",
-      Description: "",
-      Photos: "",
-      Published: false,
-    },
-  ];
-  const [slidesData, setSlidesData] = useState(testData);
-  const setNavState = useActingStore((s) => s.setNavState);
+  const [activities, setActivities] = useState([]);
+  const [selected, setSelected] = useState(null);
+  // const { selected, setSelected } = useActStore();
+  const [isLoading, setIsLoading] = useState(true);
 
   const getFeePrograms = async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}/getaddProgramData`);
-      setSlidesData(response.data.data);
-      const data = response.data.data;
-      console.log("da", data);
-      if (Array.isArray(data) && data.length > 0) {
-        setActivities(data);
-        setSlidesData(data);
-      } else {
-        setSlidesData(testData);
-        setActivities(activities);
-      }
+      setActivities(response.data.data);
+      setIsLoading(false);
     } catch (e) {
-      console.log("err", e);
+      console.error("Error fetching programs", e);
+      setIsLoading(false);
     }
   };
-  const [showData, setShowData] = useState("");
+
   useEffect(() => {
     getFeePrograms();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const setFilteredData = useActingStore((s) => s.setFilteredData);
-  useEffect(() => {
-    if (showActing) {
-      const filteredData = slidesData.find((slide) => slide?.id === showData);
-      console.log(filteredData);
-      if (filteredData) {
-        setFilteredData(filteredData);
-        console.log(filteredData);
-      }
-      setNavState({ activeNav: "Program", showImage: true });
-      navigate("/Program");
-      // window.scroll({ top: 0, behavior: "smooth" });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showActing, slidesData]);
-  const handleClick = (id) => {
-    setShowActing((prevShowActing) => !prevShowActing);
-    setShowData(id);
+
+  const handleCardClick = (activity) => {
+    setSelected(activity);
+    setShowActing(false);
   };
+
+  // const handleBackClick = () => {
+  //   setSelected(null);
+  //   setShowActing(true);
+  // };
 
   return (
     <>
-      {showActing ? (
-        <Groups />
+      {isLoading ? (
+        <div>Loading...</div>
       ) : (
-        <div>
-          <div className="grid grid-cols-2 gap-2 lg:justify-center lg:flex-wrap lg:flex lg:grid-cols-3">
-            {activities.map((activity) => (
+        <>
+          {!selected ? (
+            <>
               <div
-                onClick={() => handleClick(activity?.id)}
-                key={activity.id}
-                className="lg:w-[16rem] hover:scale-110 hover:transition-all cursor-pointer lg:h-[18rem] rounded-lg m-4 "
+                style={{ backgroundImage: "url(/program.svg)" }}
+                className="bg-cover w-full h-[14rem] lg:h-[500px] mt-[8rem] lg:mt-[8rem]"
               >
-                <img
-                  src={activity.Photos}
-                  alt={activity.Heading}
-                  className="relative lg:w-full lg:h-auto lg:max-h-full"
-                />
-                <div className="p-3">
-                  <h1 className="absolute mx-[2rem] text-lg  font-open-sans font- normal">
-                    {activity.Heading}
-                  </h1>
+                <div className="flex-col lg:absolute lg:top-1/2 lg:flex">
+                  <p
+                    className="lg:ml-[18rem] text-2xl text-white font-normal"
+                    style={{ fontFamily: "Englebert, cursive" }}
+                  >
+                    {slidesData && slidesData?.Published
+                      ? slidesData?.Heading
+                      : "Our programs"}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+              <div className="grid grid-cols-2 gap-2 lg:justify-center lg:flex-wrap lg:flex lg:grid-cols-3">
+                {activities.map((activity) => (
+                  <div
+                    onClick={() => handleCardClick(activity)}
+                    key={activity.id}
+                    className="lg:w-[16rem] hover:scale-110 transition-all cursor-pointer lg:h-[18rem] rounded-lg m-4 relative overflow-hidden"
+                  >
+                    <img
+                      src={activity.Photos}
+                      alt={activity.Heading}
+                      className="object-cover w-full h-full rounded-lg"
+                    />
+                    <div className="absolute left-0 w-full p-3 bottom-8">
+                      <h1 className="text-lg font-normal text-white font-open-sans">
+                        {activity.Heading}
+                      </h1>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            // When a card is selected, only show the selected card's full image and description
+            <div
+              className="w-full h-[500px] bg-cover bg-no-repeat bg-center mb-[20rem]"
+              style={{ backgroundImage: `url(${selected?.Photos})` }}
+            >
+              <div className="flex flex-col items-center justify-center w-full h-full">
+                <h2 className="mb-4 text-2xl text-white">
+                  {selected?.Heading}
+                </h2>
+              </div>
+              <div className="items-center justify-center text-center lg:flex lg:flex-col">
+                <div
+                  className="mx-6 lg:w-[63rem] text-justify lg:mt-[4rem] lg:space-y-2 space-y-6 mt-[2rem]  lg:text-[#000] lg:text-base text-lg text-[#62677F] font-normal"
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                >
+                  <p className="text-lg text-justify text-black">
+                    {selected?.Description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </>
   );

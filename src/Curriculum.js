@@ -59,55 +59,55 @@ const Curriculum = () => {
     const pointsArray = item?.points?.split(",").map((point) => point.trim());
     return (
       <div
-        className={`lg:flex flex-col lg:justify-between  xl:w-[19rem] lg:w-[19rem] lg:ml-[2rem] lg:min-h-[28rem] w-full min-h-[24rem] ${item.bgColor} rounded-lg shadow-md text-white `}
+        className={`lg:flex lg:mx-4 flex-col lg:justify-between xl:w-[20rem] lg:w-[19rem] lg:ml-[2rem] w-full ${item.bgColor} rounded-lg shadow-md text-white `}
       >
-        <img
-          src={item.imgSrc}
-          alt={item.heading}
-          className="w-12 h-12 mt-[1rem] ml-2 "
-        />
-        <h3
-          className="ml-2 text-3xl font-normal "
-          style={{ fontFamily: "Englebert, cursive" }}
-        >
-          {item.heading}
-        </h3>
-        <p
-          className="text-sm text-[#fff] font-normal ml-2"
-          style={{ fontFamily: "Inter, sans-serif" }}
-        >
-          {item.description}
-        </p>
-        {pointsArray && (
-          <ol className="ml-4">
-            {pointsArray.map((point, index) => (
-              <li key={index} className="text-sm font-normal">
-                {point}
-              </li>
-            ))}
-          </ol>
-        )}
-        <img
-          src={item.photo}
-          alt="P"
-          className="w-full mt-[2rem] lg:mt-[0rem]"
-        />
+        <div>
+          <img
+            src={item.imgSrc}
+            alt={item.heading}
+            className="w-12 h-12 mt-[1rem] ml-2 "
+          />
+          <h3
+            className="ml-2 text-3xl font-normal "
+            style={{ fontFamily: "Englebert, cursive" }}
+          >
+            {item.heading}
+          </h3>
+          <p
+            className="text-sm text-[#fff] font-normal ml-2"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            {item.description}
+          </p>
+          {pointsArray && (
+            <ol className="ml-4">
+              {pointsArray.map((point, index) => (
+                <li key={index} className="text-sm font-normal">
+                  {point}
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+        <div>
+          <img src={item.photo} alt="P" className="w-full mt-[2rem]" />
+        </div>
       </div>
     );
   };
 
   return (
     <>
-      <div className="flex-col lg:flex xl:items-center  xl:ml-[8rem]">
+      <div className="flex-col lg:flex xl:items-center md:items-center xl:ml-[8rem]">
         <h1
-          className="lg:text-xl  text-xl font-bold text-black text-center mt-[4rem] mx-[1rem] lg:mx-0"
+          className="lg:text-xl  text-xl font-bold text-black lg:text-center text-center mt-[4rem] mx-[1rem] lg:mx-0"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Curriculum is a plan for learning
         </h1>
-        <div className="lg:pl-[6rem] xl:pl-0">
+        <div className="">
           <p
-            className="lg:text-sm mx-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem]"
+            className="lg:text-sm mx-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem] lg:w-[60rem] md:w-[34rem] md:mx-[4rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Our curriculum is a comprehensive child-centric curriculum that
@@ -120,13 +120,13 @@ const Curriculum = () => {
           </p>
         </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[6.5rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[2rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}
       </div>
 
-      <div className="sm:hidden">
+      <div className="px-10 sm:hidden">
         <Slider {...settings}>
           {data.map((item) => (
             <div key={item.id}>

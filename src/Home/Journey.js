@@ -3,7 +3,7 @@ import React from "react";
 const Journey = () => {
   return (
     <>
-      <div className="flex lg:justify-center lg:space-x-1 xl:space-x-6 lg:mt-[4rem] lg:ml-[2rem] xl:ml-[4rem]  ">
+      <div className="flex lg:justify-center  md:justify-center  lg:space-x-1 xl:space-x-6 lg:mt-[4rem] lg:ml-[2rem] xl:ml-[1rem]  ">
         <div>
           <div className="hidden lg:flex">
             <img
@@ -13,7 +13,7 @@ const Journey = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:w-[34rem] w-[30rem] lg:mt-8 mt-[2rem] space-y-2 ">
+        <div className="flex flex-col lg:w-[34rem] w-[30rem] md:w-[20rem] lg:mt-8 mt-[2rem] space-y-2 ">
           <div className="mx-auto lg:mx-0">
             <p
               className="text-[#FC0101] lg:text-base text-lg font-bold mt-4"
@@ -30,11 +30,11 @@ const Journey = () => {
             </h1>
           </div>
 
-          <div className="lg:hidden">
+          <div className="flex justify-center lg:hidden">
             <img className="lg:w-full lg:h-[19rem]" src="img.svg" alt="i" />
           </div>
           <p
-            className="text-[#828282] lg:text-base  text-lg text-justify xl:w-[30rem]  font-normal mx-[2rem] lg:mx-0"
+            className="text-[#828282] lg:text-base  text-lg text-justify xl:w-[30rem] lg:w-[29rem]  lg:space-y-4 font-normal mx-[2rem] lg:mx-0"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Embark on a whimsical journey from our vibrant Playgroup to the
@@ -74,7 +74,7 @@ const Journey = () => {
                 </span>
               </label>
 
-              <label className="inline-flex items-center mt-2">
+              <label className="inline-flex items-center mt-2 pl-[0.4rem] lg:pl-0">
                 <input
                   type="checkbox"
                   className="rounded form-checkbox accent-[#FC0101]"

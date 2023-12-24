@@ -5,8 +5,8 @@ const Creative = () => {
   return (
     <>
       <div className="lg:mb-[6rem]">
-        <div className="lg:flex flex-row lg:justify-center mt-[2rem] xl:space-x-16  lg:space-y-4 mx-[1rem] xl:ml-0 lg:ml-[4rem] ">
-          <div className="flex flex-col lg:w-[26rem] space-y-6 lg:mx-0 mx-[2rem]">
+        <div className="lg:flex flex-row lg:justify-center mt-[2rem] xl:space-x-16 xl:ml-[10rem]  lg:space-y-4 mx-[1rem]  lg:ml-[4rem] ">
+          <div className="flex flex-col lg:w-[24rem] space-y-6 lg:mx-0 mx-[2rem]">
             <p
               className="text-[#1BBF68] font-medium lg:text-base text-lg mt-[2rem] lg:mt-0"
               style={{ fontFamily: "Inter, sans-serif" }}
@@ -73,8 +73,8 @@ const Creative = () => {
             </div>
           </div>
         </div>
-        <div className="mx-[1rem] lg:mx-0 lg:ml-[2rem] xl:ml-0 lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] xl:space-x-16 lg:space-x-0 lg:space-y-4">
-          <div className="hidden lg:flex relative lg:w-[28rem] lg:h-[11rem] bg-[#EDFEF6] mt-[4rem]">
+        <div className="mx-[1rem] lg:mx-0  xl:ml-[8rem] lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] xl:space-x-16 lg:space-x-0 lg:space-y-4">
+          <div className="hidden lg:flex relative lg:w-[24rem] lg:h-[11rem] bg-[#EDFEF6] mt-[4rem]">
             <div className="flex flex-col pl-8 pt-[2rem] z-10">
               <h1 className="font-bold text-black lg:text-xl">
                 Seeking More
@@ -137,7 +137,7 @@ const Creative = () => {
               </p>
             </div>
           </div>
-          <div className="lg:hidden relative lg:w-[28rem] lg:h-[11rem] h-[6rem] w-[21rem] mx-[1.4rem] bg-[#EDFEF6] mt-[7rem] text-center">
+          <div className="lg:hidden relative lg:w-[28rem] lg:h-[11rem] h-[6rem] w-[21rem]  bg-[#EDFEF6] mt-[7rem] text-center">
             <div className="absolute top-[-4rem] left-0 z-10">
               <img
                 className="lg:h-[18rem] h-[10rem]"

@@ -59,13 +59,14 @@ const Emailform = () => {
     : {};
   return (
     <>
-      <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem] ">
-        <div className="flex flex-row space-x-16 space-y-8">
+      <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem]">
+        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8  xl:ml-[rem]">
           <div>
             <img className="w-[9rem] h-[7rem] mt-[9rem] " src="7.svg" alt="i" />
           </div>
+          <div></div>
           <div
-            className="lg:px-10   lg:py-6 lg:border lg:border-white rounded-md lg:mt-[6rem] lg:h-[29rem] lg:mb-[2rem]"
+            className="lg:mr-10 lg:px-10 lg:py-6 lg:border lg:border-white rounded-md lg:mt-[6rem] lg:h-[29rem] lg:mb-[2rem]"
             style={desktopStyles}
           >
             <p
@@ -199,13 +200,8 @@ const Emailform = () => {
               Submit
             </button>
           </div>
-
           <div>
-            <img
-              className=" hidden lg:flex h-[38rem] -ml-16"
-              src="8.svg"
-              alt="i"
-            />
+            <img className=" hidden lg:flex h-[38rem]" src="8.svg" alt="i" />
           </div>
         </div>
       </div>
