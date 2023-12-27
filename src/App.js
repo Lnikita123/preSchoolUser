@@ -22,7 +22,7 @@ function App() {
           <Navbar />
           <div
             className={`${
-              isMobileMenuOpen ? "blur-sm pointer-events-none " : ""
+              isMobileMenuOpen ? "blur-sm pointer-events-none" : ""
             }`}
           >
             <Routes>

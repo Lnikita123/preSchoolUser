@@ -147,7 +147,7 @@ const Enquire = () => {
         >
           WE LOVE TO SEE YOU GROW
         </div>
-        <div className="flex flex-col w-full px-4 py-6  rounded-md  h-full lg:w-[40rem] lg:px-10 lg:py-6 lg:border lg:mt-[2rem] lg:h-[29rem]">
+        <div className="flex flex-col md:w-[40rem] px-4 py-6  rounded-md  h-full lg:w-[40rem] lg:px-10 lg:py-6 lg:border lg:mt-[2rem] lg:h-[29rem]">
           <div className="flex justify-center space-x-8">
             <img className="w-[3rem] h-[4rem]" src="contact2.svg" alt="in" />
             <p

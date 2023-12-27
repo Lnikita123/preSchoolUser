@@ -21,7 +21,7 @@ const Footer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="py-10 lg:py-5  flex flex-col justify-center lg:w-full h-full  lg:h-[350px] bg-gradient-to-r from-[#fff] via-bg-slate-50 to-bg-zinc-200">
+    <div className="py-10 lg:py-5 flex flex-col justify-center lg:w-full h-full  lg:h-[350px] bg-gradient-to-r from-[#fff] via-bg-slate-50 to-bg-zinc-200">
       <div className="hidden lg:flex">
         <img className="w-full" src="/Vector.svg" alt="img" />
       </div>
@@ -132,8 +132,8 @@ const Footer = () => {
       </div>
 
       <div className="grid-cols-2 gap-8 px-6 lg:hidden">
-        <div className="flex space-y-4 ">
-          <a href="/" className="flex items-center space-x-20 space-y-8">
+        <div className="flex space-y-4 md:ml-[1rem] ">
+          <a href="/" className="flex items-center space-x-20 space-y-15">
             {" "}
             <img
               className="w-[114px] h-[59px] "
@@ -143,9 +143,9 @@ const Footer = () => {
             <img src="/c5.png" alt="img" />
           </a>
         </div>
-        <div className="flex flex-row space-x-10">
+        <div className="flex flex-row space-x-10 md:ml-[2rem] ml-[1rem] lg:ml-0">
           <div className="">
-            <h4 className="text-[#000] font-bold mb-4">Links</h4>
+            <h4 className="text-[#000] font-bold mb-4 mt-4">Links</h4>
             <ul className="leading-8 text-[#000] lg:mt-[25px] font-normal text-xs font-Lato">
               <li className="hover:underline ">
                 <a href="/">Home</a>
@@ -169,7 +169,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="">
-            <h4 className="text-[#000] font-bold mb-4">
+            <h4 className="text-[#000] font-bold mb-4 mt-4">
               <a className="ml-[6rem]" href="/Contact">
                 Contact Us
               </a>
@@ -179,7 +179,7 @@ const Footer = () => {
               <li className="hover:underline ">
                 <a href="/Contact"> info@actkidz.com</a>
               </li>
-              <li className="hover:underline ">
+              <li className="hover:underline md:w-[10rem] ">
                 <a href="/Contact">
                   1-30-22, G R Reddy Nagar, Kapra, ECIL, Hyderabad, Telangana
                   500062
@@ -188,7 +188,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="">
+        <div className="md:ml-[2rem] lg:ml-0 ml-[1rem]">
           <h4 className="text-[#000] font-bold mb-4 mt-[2rem]">
             {" "}
             <a href="/">Social Media</a>

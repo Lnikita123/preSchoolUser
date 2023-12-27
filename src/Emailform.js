@@ -60,7 +60,7 @@ const Emailform = () => {
   return (
     <>
       <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem]">
-        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8  xl:ml-[rem]">
+        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8">
           <div>
             <img className="w-[9rem] h-[7rem] mt-[9rem] " src="7.svg" alt="i" />
           </div>
@@ -205,14 +205,14 @@ const Emailform = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden bg-[#1E79C2] mt-[3rem] lg:mt-[4rem] flex flex-col items-center">
+      <div className="lg:hidden w-screen bg-[#1E79C2] mt-[3rem] lg:mt-[4rem] flex flex-col items-center">
         <div
           className="text-white text-center text-lg font-medium mt-[2rem]  lg:font-medium"
           style={{ fontFamily: "Inter, sans-serif", letterSpacing: "2.4px" }}
         >
           WE LOVE TO SEE YOU GROW
         </div>
-        <div className="flex flex-col w-full px-4 py-6  rounded-md  h-full lg:w-[40rem] lg:px-10 lg:py-6 lg:border lg:mt-[2rem] lg:h-[29rem]">
+        <div className="flex flex-col w-[24rem] md:w-[40rem] px-4 py-6 rounded-md h-full lg:w-[40rem] lg:px-10 lg:py-6 lg:border lg:mt-[2rem] lg:h-[29rem]">
           <div className="flex justify-center space-x-8">
             <img className="w-[3rem] h-[4rem]" src="contact2.svg" alt="in" />
             <p

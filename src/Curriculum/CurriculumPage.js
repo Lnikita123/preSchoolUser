@@ -35,7 +35,7 @@ const Curriculumpage = () => {
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[6rem]"
+            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[12rem]"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Curriculum
@@ -43,7 +43,7 @@ const Curriculumpage = () => {
         </div>
       </div>
       <div className="lg:items-center lg:justify-center lg:text-center lg:flex lg:flex-col">
-        <div className="mx-6  lg:w-[63rem] lg:text-justify lg:mt-[4rem]  mt-[2rem] ">
+        <div className="mx-[3rem] lg:w-[63rem] lg:text-justify lg:mt-[4rem]  mt-[2rem] ">
           {slidesData?.Published && slidesData?.Description ? (
             `${slidesData?.Description}`
           ) : (
@@ -78,14 +78,14 @@ const Curriculumpage = () => {
                   className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal lg:mt-0 mt-[2rem]"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  <p className="lg:mt-0 mt-[2rem]">
+                  <p className="lg:mt-0">
                     For a child below 6, curriculum comprises the environment
                     which in turn means that we offer the child to learn. It is
                     essential that a young child gets daily experience with
                     learning aids which have specific usage, derived from the
                     curriculum.{" "}
                   </p>
-                  <p className="lg:mt-0 mt-[2rem]">
+                  <p className="lg:mt-0 mt-[1rem]">
                     All areas of work for the child, both internal and external
                     have been planned with extreme care to facilitate self
                     learning, and implement the objectives set in the
@@ -108,13 +108,13 @@ const Curriculumpage = () => {
                   <p>
                     Everything done at (fill your school name) has been
                     intrinsically designed to set a child up for success.
-                    <p className="lg:mt-0 mt-[2rem]">
+                    <p className="lg:mt-0 mt-[1rem]">
                       Children are given Lessons with materials from choosing
                       activities they would like to work with. They can repeat
                       and explore them as they desire.{" "}
                     </p>
                   </p>
-                  <p className="lg:mt-0 mt-[2rem]">
+                  <p className="lg:mt-0 mt-[1rem]">
                     At the same time they are closely observed by teachers who
                     gently encourage children to master the activity.
                   </p>
@@ -134,7 +134,7 @@ const Curriculumpage = () => {
                   <p>
                     Our classrooms is organized into following areas of learning{" "}
                     <br />
-                    <p className="lg:mt-0 mt-[2rem]">
+                    <p className="lg:mt-0 mt-[1rem]">
                       1) Language Area <br /> 2) Art Corner <br /> 3) Cognitive
                       Corner
                       <br /> 4) Senso motor skills <br /> 5) EPL (Exercises of
