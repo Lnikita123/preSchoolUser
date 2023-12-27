@@ -61,20 +61,20 @@ const Curriculum = () => {
       <div
         className={`lg:flex lg:mx-4 flex-col lg:justify-between xl:w-[20rem] lg:w-[19rem] lg:ml-[2rem] w-full ${item.bgColor} rounded-lg shadow-md text-white `}
       >
-        <div>
+        <div className="pt-2 pl-2">
           <img
             src={item.imgSrc}
             alt={item.heading}
-            className="w-12 h-12 mt-[1rem] ml-2 "
+            className="w-12 h-12 mt-[1rem] mb-4 ml-2 "
           />
           <h3
-            className="ml-2 text-3xl font-normal "
+            className="ml-2 text-3xl font-normal mb-4"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             {item.heading}
           </h3>
           <p
-            className="text-sm text-[#fff] font-normal ml-2"
+            className="text-sm text-[#fff] font-normal leading-5 ml-2 md:w-[35rem] lg:w-[18rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {item.description}
@@ -98,16 +98,16 @@ const Curriculum = () => {
 
   return (
     <>
-      <div className="flex-col lg:flex xl:items-center md:items-center xl:ml-[8rem]">
+      <div className="flex-col lg:flex xl:items-center md:items-center xl:ml-[2rem]">
         <h1
-          className="lg:text-xl  text-xl font-bold text-black lg:text-center text-center mt-[4rem] mx-[1rem] lg:mx-0"
+          className="lg:text-3xl  text-xl font-bold text-black lg:text-center text-center mt-[4rem] mx-[1rem] lg:mx-0"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Curriculum is a plan for learning
         </h1>
-        <div className="">
+        <div>
           <p
-            className="lg:text-sm mx-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem] lg:w-[60rem] md:w-[34rem] md:mx-[4rem]"
+            className="lg:text-sm mx-[2rem] text-base font-medium text-center lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem] lg:w-[60rem] md:w-[37rem] md:mx-[5.8rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Our curriculum is a comprehensive child-centric curriculum that
@@ -120,7 +120,7 @@ const Curriculum = () => {
           </p>
         </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:ml-[2rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:gap-[1rem] lg:w-[85rem] lg:pl-[15rem] md:w-[37rem] md:ml-[6rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}

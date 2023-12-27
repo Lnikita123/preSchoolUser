@@ -53,7 +53,7 @@ const Play = ({ slidesData }) => {
               >
                 <div className="flex-col lg:absolute lg:top-1/2 lg:flex">
                   <p
-                    className="lg:ml-[18rem] text-2xl text-white font-normal"
+                    className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[10rem]"
                     style={{ fontFamily: "Englebert, cursive" }}
                   >
                     {slidesData && slidesData?.Published

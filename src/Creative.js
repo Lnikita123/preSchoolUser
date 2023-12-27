@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Creative = () => {
   return (
     <>
-      <div className="lg:mb-[6rem]">
-        <div className="lg:flex flex-row lg:justify-center mt-[2rem] xl:space-x-16 xl:ml-[10rem]  lg:space-y-4 mx-[1rem]  lg:ml-[4rem] ">
+      <div className="lg:mb-[6rem] lg:mt-[6rem]">
+        <div className="lg:flex flex-row lg:justify-center md:mx-[3rem] mt-[2rem] xl:space-x-10 xl:ml-[10rem] lg:space-y-4 mx-[1rem]">
           <div className="flex flex-col lg:w-[24rem] space-y-6 lg:mx-0 mx-[2rem]">
             <p
               className="text-[#1BBF68] font-medium lg:text-base text-lg mt-[2rem] lg:mt-0"
@@ -25,9 +25,9 @@ const Creative = () => {
             </p>
           </div>
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[3rem] lg:mx-0 mx-[1rem] lg:mt-0">
-            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
+            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16 md:w-16 md:h-14  ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
+                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
                 src="/bulb.png"
                 alt="i"
               />
@@ -49,9 +49,9 @@ const Creative = () => {
             </div>
           </div>
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
-            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
+            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl flex lg:w-16 lg:h-10 w-32 h-16 md:w-16 md:h-14 ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
+                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
                 src="/draw.svg"
                 alt="i"
               />
@@ -64,7 +64,7 @@ const Creative = () => {
                 Where Creativity Meets Joyful Growth
               </p>
               <p
-                className="lg:text-base text-lg text-[#828282] font-normal"
+                className="lg:text-base text-lg text-[#828282] font-normal lg:w-[15rem]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Where health meets happiness – ActKidz, a joyful space for
@@ -73,7 +73,7 @@ const Creative = () => {
             </div>
           </div>
         </div>
-        <div className="mx-[1rem] lg:mx-0  xl:ml-[8rem] lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] xl:space-x-16 lg:space-x-0 lg:space-y-4">
+        <div className="mx-[1rem] lg:mx-0  xl:ml-[8rem] md:mx-[3rem] lg:flex flex-row lg:justify-center mt-[2rem] lg:mt-[4rem] xl:space-x-12 lg:space-x-0 lg:space-y-4">
           <div className="hidden lg:flex relative lg:w-[24rem] lg:h-[11rem] bg-[#EDFEF6] mt-[4rem]">
             <div className="flex flex-col pl-8 pt-[2rem] z-10">
               <h1 className="font-bold text-black lg:text-xl">
@@ -90,9 +90,9 @@ const Creative = () => {
           </div>
 
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4  lg:mt-0 lg:mx-0 mx-[1rem]">
-            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
+            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  md:w-16 md:h-14 ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
+                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
                 src="/digital.svg"
                 alt="i"
               />
@@ -114,9 +114,9 @@ const Creative = () => {
             </div>
           </div>
           <div className="flex flex-row lg:flex-col  lg:w-[17rem] xl:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
-            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  ">
+            <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  md:w-16 md:h-14 ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
+                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
                 src="/cognition.svg"
                 alt="i"
               />
@@ -129,7 +129,7 @@ const Creative = () => {
                 Empowering Imaginative Lives
               </p>
               <p
-                className="lg:text-base text-lg text-[#828282] font-normal"
+                className="lg:text-base text-lg text-[#828282] lg:w-[15rem] font-normal"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Empowering lives creatively – ActKidz builds a foundation for a
@@ -137,7 +137,7 @@ const Creative = () => {
               </p>
             </div>
           </div>
-          <div className="lg:hidden relative lg:w-[28rem] lg:h-[11rem] h-[6rem] w-[21rem]  bg-[#EDFEF6] mt-[7rem] text-center">
+          <div className="lg:hidden relative lg:w-[28rem] lg:h-[11rem] h-[6rem] w-[21rem]  bg-[#EDFEF6] mt-[7rem] lg:ml-0 md:ml-[10.5rem] ml-[1.5rem]  text-center">
             <div className="absolute top-[-4rem] left-0 z-10">
               <img
                 className="lg:h-[18rem] h-[10rem]"

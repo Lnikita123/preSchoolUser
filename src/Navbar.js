@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useActingStore } from "./store/useActingStore.js";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   const [navState, setNavState] = useState({
     activeNav: "Home",
     showImage: false,
@@ -26,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`lg:font-englebert font-opensans w-full fixed z-50 px-6 items-center text-center font-medium  py-4 top-0 space-x-32  flex flex-wrap justify-center`}
+        className={`lg:font-englebert font-opensans fixed z-50 w-full px-3 items-center text-center font-medium  py-5 top-0 flex justify-between md:justify-between lg:justify-around`}
         style={{
           background: "#FFF",
           //boxShadow: "0px 3.84141px 20.35947px 0px rgba(5, 104, 236, 0.13)",
@@ -34,11 +35,16 @@ const Navbar = () => {
       >
         <Link to="/" onClick={() => handleNavClick("Home")}>
           {!isMobileMenuOpen && (
-            <img className="" src="/prelogo.svg" alt="logo" />
+            <img
+              className="w-[5rem] h-[3.35rem] lg:ml-[6rem] ml-[1rem] md:ml-[2.5rem]"
+              src="/prelogo.svg"
+              alt="logo"
+            />
           )}
         </Link>
+
         {/* Desktop Menu */}
-        <div className="hidden lg:flex  lg:items-center justify-center text-[#000]  font-normal text-center text-lg space-x-16">
+        <div className="hidden lg:flex  lg:items-center justify-center text-[#000]  font-normal text-center text-lg space-x-20">
           <Link
             to="/"
             onClick={() => handleNavClick("Home")}
@@ -94,32 +100,33 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="w-10 h-10 px-3 text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          onClick={toggleMobileMenu}
+          className="w-12 h-12 px-3 text-gray-500 rounded-lg lg:hidden md:mr-[2rem] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         >
           <GiHamburgerMenu className="stroke-2" />
         </button>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-[5rem] w-64 bg-gray-50 shadow-lg transition-transform transform ${
-            isMobileMenuOpen ? "right-0 rounded-xl" : "translate-x-full"
+          className={`lg:hidden absolute top-[2rem] w-[23rem] bg-gray-50 shadow-lg transition-transform transform ${
+            isMobileMenuOpen ? "right-6 rounded-xl" : "translate-x-full"
           }`}
         >
           {isMobileMenuOpen && (
-            <ul className="z-50 flex w-full p-4 bg-white rounded-xl">
+            <ul className="z-50 flex p-10 bg-white rounded-xl">
               <div>
                 {/* <div>
                   <img src="/prelogo.svg" alt="im" />
                 </div> */}
               </div>
-              <div className="flex flex-col justify-end text-2xl font-bold text-end ">
+              <div className="flex flex-col text-2xl font-bold text-end w-full ">
                 <li className="flex self-end py-2 pl-3 text-[#2A2A2A] rounded">
                   <RxCross2 size={24} onClick={toggleMobileMenu} />
                 </li>
                 <li>
                   <a
                     href="/"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     Home
@@ -128,6 +135,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/About"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     About us
@@ -136,6 +144,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/Admissions"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     Admissions
@@ -144,6 +153,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/Program"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     Programs
@@ -152,6 +162,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/Curriculumpage"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     Curriculum
@@ -160,6 +171,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/Contact"
+                    onClick={toggleMobileMenu}
                     className="block py-2 pl-3 text-[#2A2A2A] rounded"
                   >
                     Contact Us

@@ -8,7 +8,7 @@ import Team from "./Team";
 
 const Body = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden ">
       <Hero />
       <Curriculum />
       <Journey />
