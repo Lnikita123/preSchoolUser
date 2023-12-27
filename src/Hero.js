@@ -114,7 +114,7 @@ const Hero = () => {
           </p>
           <Link to="/Admissions" onClick={() => handleNavClick("Admissions")}>
             <button
-              className="rounded-lg px-28 flex justify-center mx-[2.5rem] md:mx-[13rem] py-4 lg:flex-col items-center mt-[2rem] md:mb-[2rem] text-white  bg-[#FD0101] text-center text-xl font-semibold"
+              className="rounded-lg px-28 flex justify-center mx-[2rem] md:mx-[13rem] py-4 lg:flex-col items-center mt-[2rem] md:mb-[2rem] text-white  bg-[#FD0101] text-center text-xl font-semibold"
               style={{
                 boxShadow: "0px 8px 27.7px 0px rgba(253, 1, 1, 0.56)",
               }}
