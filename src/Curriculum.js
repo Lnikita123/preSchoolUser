@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 const Curriculum = () => {
   const settings = {
     dots: true,
@@ -74,7 +75,7 @@ const Curriculum = () => {
             {item.heading}
           </h3>
           <p
-            className="text-sm text-[#fff] font-normal leading-5 ml-2 md:w-[35rem] lg:w-[18rem]"
+            className="text-sm text-[#fff] font-normal ml-2  md:w-[40rem] lg:w-[18rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {item.description}
@@ -107,7 +108,7 @@ const Curriculum = () => {
         </h1>
         <div>
           <p
-            className="lg:text-sm mx-[2rem] text-base font-medium text-center lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[69rem] lg:w-[60rem] md:w-[37rem] md:mx-[5.8rem]"
+            className="lg:text-sm mx-[2.5rem] mb-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[66rem] lg:w-[60rem] md:w-[40rem] md:mx-[4rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Our curriculum is a comprehensive child-centric curriculum that
@@ -120,7 +121,7 @@ const Curriculum = () => {
           </p>
         </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-0 lg:gap-[1rem] lg:w-[85rem] lg:pl-[15rem] md:w-[37rem] md:ml-[6rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] lg:gap-0 lg:mx-0 md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-[20rem] 2xl:ml-[27rem] lg:ml-[2rem] md:w-[42rem] md:ml-[3rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}

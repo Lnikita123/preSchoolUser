@@ -43,7 +43,7 @@ const Curriculumpage = () => {
         </div>
       </div>
       <div className="lg:items-center lg:justify-center lg:text-center lg:flex lg:flex-col">
-        <div className="mx-[3rem] lg:w-[63rem] lg:text-justify lg:mt-[4rem]  mt-[2rem] ">
+        <div className="mx-[2rem] md:mx-[2.5rem] lg:w-[63rem] lg:text-justify lg:mt-[4rem]  mt-[2rem] ">
           {slidesData?.Published && slidesData?.Description ? (
             `${slidesData?.Description}`
           ) : (
@@ -57,7 +57,7 @@ const Curriculumpage = () => {
                 planned to foster children's learning and development. In simple
                 terms, Curriculum is a plan for learning.
                 <p
-                  className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal lg:mt-0 mt-[2rem]"
+                  className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal lg:mt-0 mt-[1rem]"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   Our curriculum is a comprehensive child-centric curriculum
