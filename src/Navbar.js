@@ -7,6 +7,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const isMobileMenuOpen = useActingStore((s) => s.isMobileMenuOpen);
   const setIsMobileMenuOpen = useActingStore((s) => s.setIsMobileMenuOpen);
+  const path = window.location.pathname;
+  const formatPath = path.split("/").join("");
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -24,10 +26,11 @@ const Navbar = () => {
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <>
       <div
-        className={`lg:font-englebert font-opensans fixed z-50 w-full px-3 items-center text-center font-medium  py-5 top-0 flex justify-between md:justify-between lg:justify-around`}
+        className={`lg:font-englebert font-opensans w-full lg:w-full lg:left-0 xl:left-0 fixed z-50 px-6 items-center text-center font-medium py-4 top-0 space-x-32  flex flex-wrap lg:justify-center xl:justify-center 2xl:justify-center md:justify-between justify-between`}
         style={{
           background: "#FFF",
           //boxShadow: "0px 3.84141px 20.35947px 0px rgba(5, 104, 236, 0.13)",
@@ -48,7 +51,7 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={() => handleNavClick("Home")}
-            className={navState.activeNav === "Home" ? "text-[#FC0101]" : ""}
+            className={formatPath === "" ? "text-[#FC0101]" : ""}
           >
             Home
           </Link>
@@ -56,7 +59,9 @@ const Navbar = () => {
           <Link
             to="/About"
             onClick={() => handleNavClick("About")}
-            className={navState.activeNav === "About" ? "text-[#FC0101]" : ""}
+            className={
+              formatPath.toLowerCase() === "about" ? "text-[#FC0101]" : ""
+            }
           >
             About us
           </Link>
@@ -65,7 +70,7 @@ const Navbar = () => {
             to="/Admissions"
             onClick={() => handleNavClick("Admissions")}
             className={
-              navState.activeNav === "Admissions" ? "text-[#FC0101]" : ""
+              formatPath.toLowerCase() === "admissions" ? "text-[#FC0101]" : ""
             }
           >
             Admissions
@@ -74,7 +79,9 @@ const Navbar = () => {
           <Link
             to="/Program"
             onClick={() => handleNavClick("Program")}
-            className={navState.activeNav === "Program" ? "text-[#FC0101]" : ""}
+            className={
+              formatPath.toLowerCase() === "program" ? "text-[#FC0101]" : ""
+            }
           >
             Programs
           </Link>
@@ -83,7 +90,9 @@ const Navbar = () => {
             to="/Curriculumpage"
             onClick={() => handleNavClick("Curriculumpage")}
             className={
-              navState.activeNav === "Curriculumpage" ? "text-[#FC0101]" : ""
+              formatPath.toLowerCase() === "curriculumpage"
+                ? "text-[#FC0101]"
+                : ""
             }
           >
             Curriculum
@@ -108,18 +117,18 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-[2rem] w-[23rem] bg-gray-50 shadow-lg transition-transform transform ${
+          className={`lg:hidden absolute top-[5rem] w-[20rem] bg-gray-50 shadow-lg transition-transform transform ${
             isMobileMenuOpen ? "right-6 rounded-xl" : "translate-x-full"
           }`}
         >
           {isMobileMenuOpen && (
-            <ul className="z-50 flex p-10 bg-white rounded-xl">
+            <ul className="z-50 flex p-6 bg-white rounded-xl">
               <div>
                 {/* <div>
                   <img src="/prelogo.svg" alt="im" />
                 </div> */}
               </div>
-              <div className="flex flex-col text-2xl font-bold text-end w-full ">
+              <div className="flex flex-col w-full text-2xl font-bold text-end ">
                 <li className="flex self-end py-2 pl-3 text-[#2A2A2A] rounded">
                   <RxCross2 size={24} onClick={toggleMobileMenu} />
                 </li>

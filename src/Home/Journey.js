@@ -13,8 +13,8 @@ const Journey = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:w-[34rem] w-[30rem] md:w-[38rem] lg:mt-8 mt-[2rem] space-y-2 ">
-          <div className="mx-auto lg:mx-0">
+        <div className="flex flex-col lg:w-[34rem] w-[30rem] md:w-[48rem] lg:mt-8 mt-[2rem] space-y-2 ">
+          <div className="mx-[2.7rem] md:mx-[3rem] lg:mx-0">
             <p
               className="text-[#FC0101] lg:text-base text-lg md:text-center font-bold mt-4 mb-3"
               style={{ fontFamily: "Inter, sans-serif" }}
@@ -32,13 +32,13 @@ const Journey = () => {
 
           <div className="flex justify-center lg:hidden">
             <img
-              className="lg:w-full lg:h-[19rem] md:w-[40rem] md:h-[40rem] h-[20rem] w-[20rem]"
+              className="lg:w-full lg:h-[19rem] md:w-full w-full"
               src="img.svg"
               alt="i"
             />
           </div>
           <p
-            className="text-[#828282] lg:text-base md:text-center text-lg text-justify xl:w-[30rem] lg:w-[29rem] lg:space-y-4 font-normal mx-[3rem] md:mx-[2rem] lg:mx-0"
+            className="text-[#828282] lg:text-base md:text-center text-lg lg:text-justify xl:w-[30rem] lg:w-[29rem]  lg:space-y-4 font-normal mx-[2rem] lg:mx-0"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Embark on a whimsical journey from our vibrant Playgroup to the

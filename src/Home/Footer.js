@@ -16,12 +16,14 @@ const Footer = () => {
       console.log("err", e);
     }
   };
+
   useEffect(() => {
     getAboutData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
-    <div className="py-10 lg:py-5 flex flex-col justify-center lg:w-full h-full  lg:h-[350px] bg-gradient-to-r from-[#fff] via-bg-slate-50 to-bg-zinc-200">
+    <div className="py-10 lg:py-5 mb-[5rem] lg:mb-[15rem] flex flex-col justify-center lg:w-full h-full lg:h-[350px] bg-gradient-to-r from-[#fff] via-bg-slate-50 to-bg-zinc-200">
       <div className="hidden lg:flex">
         <img className="w-full" src="/Vector.svg" alt="img" />
       </div>
@@ -179,7 +181,7 @@ const Footer = () => {
               <li className="hover:underline ">
                 <a href="/Contact"> info@actkidz.com</a>
               </li>
-              <li className="hover:underline md:w-[10rem] ">
+              <li className="hover:underline md:w-[10rem]">
                 <a href="/Contact">
                   1-30-22, G R Reddy Nagar, Kapra, ECIL, Hyderabad, Telangana
                   500062
