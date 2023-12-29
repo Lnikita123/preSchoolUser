@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Creative = () => {
   return (
     <>
-      <div className="lg:mb-[6rem] lg:w-[65rem] xl:w-[74rem] 2xl:w-[90rem]">
+      <div className="lg:mb-[6rem] lg:w-[65rem] xl:w-[74rem] 2xl:w-[85rem] 2xl:ml-[15.7rem] 2xl:mt-[5rem]">
         <div className="lg:flex flex-row  lg:justify-center mt-[2rem] xl:space-x-3 xl:ml-[10rem] lg:space-y-4 mx-[1rem] lg:ml-[6rem] ">
           <div className="flex flex-col lg:w-[24rem] space-y-6 lg:mx-0 mx-[2rem]">
             <p

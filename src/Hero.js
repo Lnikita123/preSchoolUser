@@ -49,7 +49,7 @@ const Hero = () => {
           }}
           className="lg:flex flex-col bg-cover xl:w-full lg:w-full w-full h-[14rem] xl:h-[500px] 2xl:h-[38.6rem] lg:h-[360px]   xl:mt-[8rem]  mt-[10rem] "
         >
-          <div className="lg:absolute xl:ml-[11rem] 2xl:ml-[17rem] lg:ml-[5rem] xl:top-1/4 lg:pt-[2rem] 2xl:space-y-8 xl:space-y-8 lg:space-y-6">
+          <div className="lg:absolute h-[25rem] xl:ml-[9.5rem] 2xl:ml-[29.5rem] lg:ml-[5rem] xl:top-[14rem] lg:pt-[2rem]">
             <div>
               <img src="c5.png" alt="i" />
             </div>
@@ -62,19 +62,19 @@ const Hero = () => {
                 : "Welcome to ActKidz Preschool"}
             </h1>
             <p
-              className="lg:w-[34rem] xl:w-[38rem] 2xl:w-[38rem] text-base font-normal text-white lg:mt-[1rem]"
+              className="lg:w-[34rem] 2xl:mt-[2rem] xl:w-[38rem] 2xl:w-[34rem] text-base font-normal text-white lg:mt-[1rem]"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {slidesData?.Published && slidesData?.Description
                 ? `${slidesData?.Description}`
                 : "Its essential yo bring your identification, health card, a list of medications, g your identification, health."}
             </p>
-            <div>
+            <div className="lg:mt-[2rem] 2xl:mt-[4rem]">
               <a
                 href={"https://www.google.com"}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full px-6 py-4 text-white bg-[#FD0101] text-center text-xl font-semibold  lg:mt-[2rem]"
+                className="rounded-full px-6 py-4 text-white bg-[#FD0101] text-center text-xl font-semibold "
                 style={{
                   boxShadow: "0px 8px 27.7px 0px rgba(253, 1, 1, 0.56)",
                 }}
@@ -127,9 +127,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col space-y-4 lg:space-x-2 xl:space-x-3 lg:justify-center mt-[2rem] lg:mt-[4rem] lg:flex-row lg:space-y-0 mx-[2rem] lg:ml-[3.5rem] xl:ml-[2rem] md:space-x-0 md:items-baseline md:flex-row md:mx-0  md:ml-[4rem] md:gap-2  ">
+      <div className="flex flex-col space-y-4 2xl:w-[64.8rem] 2xl:ml-[29.5rem] mt-[2rem] lg:mt-[4rem] lg:flex-row lg:space-y-0 mx-[2rem] lg:ml-[3.5rem] xl:ml-[9.5rem] md:space-x-0 md:items-baseline md:flex-row md:mx-0 md:ml-[4rem] md:gap-2  ">
         <div className="flex flex-row space-x-6 lg:space-x-2 md:space-x-4 lg:mt-0 mt-[2rem]">
-          <div className="flex justify-center items-center w-[8rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] mx-auto bg-[#FFF4E4] rounded-full ">
+          <div className="flex justify-center items-center w-[7rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] md:mr-3 mx-auto bg-[#FFF4E4] rounded-full ">
             <div>
               <img
                 src="/img1.png"
@@ -148,19 +148,19 @@ const Hero = () => {
               house
             </p>
           </div>
-          <div className="hidden lg:flex lg:mt-[1rem] w-[2px] h-[2.5rem] bg-gray-300"></div>
+          <div className="hidden lg:flex lg:mt-[1rem] w-[2px] h-[2.5rem] mr-[2rem] bg-gray-300"></div>
         </div>
         <div className="flex flex-row space-x-6 lg:space-x-2">
-          <div className="flex justify-center items-center w-[6rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] mx-auto bg-[#FFF4E4] rounded-full ">
+          <div className="flex justify-center items-center w-[5.5rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] md:mr-3 mx-auto bg-[#d9ffe5] rounded-full ">
             <div>
               <img
                 src="/img2.png"
                 alt="i"
-                className="lg:w-[2.4rem] lg:h-[2.4rem] w-[2.4rem] h-[2.4rem]  md:w-[1.5rem] md:h-[1.5rem]"
+                className="lg:w-[2.4rem] lg:h-[2.4rem] w-[2.4rem] h-[2.4rem] md:w-[1.5rem] md:h-[1.5rem]"
               />
             </div>
           </div>
-          <div className="flex flex-col xl:w-64 lg:w-64 md:w-[7.5rem]">
+          <div className="flex flex-col xl:w-56 lg:w-64 md:w-[7.5rem]">
             <h1 className="text-[#03093C]  text-lg font-bold">Admissions</h1>
             <p
               className="text-[#03093C] text-sm font-normal"
@@ -172,7 +172,7 @@ const Hero = () => {
           <div className="hidden lg:flex lg:mt-[1rem] w-[2px] h-[2.5rem] bg-gray-300"></div>
         </div>
         <div className="flex flex-row space-x-6 lg:space-x-2 md:space-x-1">
-          <div className="flex justify-center items-center w-[8rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] md:mr-4 mx-auto bg-[#FFCFCD] rounded-full">
+          <div className="flex justify-center items-center w-[7rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] md:mr-3 mx-auto bg-[#FFCFCD] rounded-full">
             <div>
               <img
                 src="/img3.png"
@@ -181,7 +181,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col xl:w-64 lg:w-64 md:w-[12rem]">
+          <div className="flex flex-col xl:w-64 lg:w-64 md:w-[10rem]">
             <h1 className="text-[#03093C]  text-lg font-bold">
               Enriched program
             </h1>

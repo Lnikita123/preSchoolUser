@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <div className="py-10 lg:py-5 mb-[5rem] lg:mb-[15rem] flex flex-col justify-center lg:w-full h-full lg:h-[350px] bg-gradient-to-r from-[#fff] via-bg-slate-50 to-bg-zinc-200">
       <div className="hidden lg:flex">
-        <img className="w-full" src="/Vector.svg" alt="img" />
+        <img className="w-full 2xl:mt-[-2rem] xl:mt-[-4rem]" src="/Vector.svg" alt="img" />
       </div>
       <div className="flex-row items-start justify-center hidden px-6 space-x-24 lg:flex">
         <div>

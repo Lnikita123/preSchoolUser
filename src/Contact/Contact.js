@@ -1,6 +1,6 @@
 import { MdEmail } from "react-icons/md";
-import { LiaPhoneSolid } from "react-icons/lia";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5";
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
@@ -32,7 +32,7 @@ const Contact = () => {
       <div className="flex flex-col lg:flex-row mt-[8rem] justify-center space-x-14 lg:space-x-24 ">
         <div className="relative">
           <img
-            className="h-[350px] w-full"
+            className="h-[350px] w-full 2xl:ml-5 xl:ml-4"
             src={
               slidesData?.Photo && slidesData.Published
                 ? slidesData?.Photo
@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-row space-x-4">
             <div className=" text-[#FC0101]">
-              <LiaPhoneSolid className="w-[2rem] h-[1.7rem]  " />
+              <IoCall className="w-[2rem] h-[1.7rem]  " />
             </div>
             <div
               className="font-normal text-black"
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-row space-x-4">
             <div className=" text-[#FC0101]">
-              <IoLocationOutline className="w-[2rem] h-[1.7rem]  " />
+              <IoLocationSharp className="w-[2rem] h-[1.7rem]  " />
             </div>
 
             <div
@@ -97,7 +97,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[18rem]   overflow-hidden lg:mt-[4rem] mt-[4rem]">
+      <div className="w-full h-[25rem] 2xl:h-[34.5rem] overflow-hidden lg:mt-[4rem] mt-[4rem]">
         <iframe
           title="Location Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7618468630934!2d78.56658171529582!3d17.488966970494495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d8239e394ed%3A0xa89127946c40606b!2sACTKIDZ+PRESCHOOL!5e0!3m2!1sen!2sin!4v1657187470651!5m2!1sen!2sin"

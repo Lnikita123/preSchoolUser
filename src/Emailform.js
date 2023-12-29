@@ -59,14 +59,14 @@ const Emailform = () => {
     : {};
   return (
     <>
-      <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem] 2xl:justify-center xl:justify-center">
-        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8  xl:ml-[rem]">
+      <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem]">
+        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8">
           <div>
-            <img className="w-[9rem] h-[7rem] mt-[9rem] " src="7.svg" alt="i" />
+            <img className="w-[9rem] h-[7rem] mt-[-11rem] xl:mr-3 2xl:ml-[12.3rem] " src="7.svg" alt="i" />
           </div>
           <div></div>
           <div
-            className="lg:mr-10 lg:px-10 lg:py-6 lg:border lg:border-white rounded-md lg:mt-[6rem] lg:h-[29rem] lg:mb-[2rem]"
+            className="lg:px-10 lg:py-6 lg:border lg:border-white rounded-xl lg:mt-[6rem] lg:h-[29rem] z-0 lg:mb-[2rem]"
             style={desktopStyles}
           >
             <p
@@ -201,7 +201,7 @@ const Emailform = () => {
             </button>
           </div>
           <div>
-            <img className=" hidden lg:flex h-[38rem]" src="8.svg" alt="i" />
+            <img className=" hidden lg:flex h-[38rem] z-50" src="8.svg" alt="i" />
           </div>
         </div>
       </div>

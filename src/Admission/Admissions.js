@@ -34,7 +34,7 @@ const Admissions = () => {
       >
         <div className="lg:mt-[16rem] lg:flex flex-col ">
           <p
-            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[10rem]"
+            className="mx-6 lg:ml-[18rem] xl:ml-[9.7rem] 2xl:ml-[29.8rem] text-2xl text-white font- normal lg:pt-0 pt-[10rem]"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Admissions
@@ -43,7 +43,7 @@ const Admissions = () => {
       </div>
       <div className="items-center justify-center text-center lg:flex lg:flex-col">
         <div
-          className="mx-[3rem] lg:w-[63rem] text-justify lg:mt-[4rem] lg:space-y-2 space-y-6 mt-[2rem] lg:text-[#000] lg:text-base text-lg text-[#62677F] font-normal"
+          className="mx-[3rem] lg:w-[63rem] xl:w-[65rem] xl:ml-[7rem] text-justify lg:mt-[4rem] lg:space-y-2 space-y-6 mt-[2rem] mb-[4rem] lg:text-[#000] lg:text-base text-lg text-[#62677F] font-normal"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           <p>

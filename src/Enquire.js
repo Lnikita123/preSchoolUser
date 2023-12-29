@@ -37,7 +37,7 @@ const Enquire = () => {
   }
   return (
     <>
-      <div className="hidden lg:flex flex-col bg-[#1E79C2] lg:mt-[4rem] mt-[3rem] lg:h-[42rem]  items-center">
+      <div className="hidden lg:flex flex-col bg-[#1E79C2] lg:h-[47rem] items-center">
         <p
           className="text-[#fff] text-center text-base font-medium lg:mt-[2rem]"
           style={{ fontFamily: "Inter, sans-serif" }}
@@ -45,7 +45,7 @@ const Enquire = () => {
           Enquire Now
         </p>
         <div
-          className="flex flex-col  lg:w-[40rem]  lg:px-10 lg:py-6 lg:border lg:border-white rounded-md lg:mt-[2rem] lg:h-[29rem]"
+          className="flex flex-col  lg:w-[40rem]  lg:px-10 lg:py-6 lg:border lg:border-white rounded-xl lg:mt-[2rem] lg:h-[29rem]"
           style={{
             background: "rgba(255, 255, 255, 0.50)",
 
