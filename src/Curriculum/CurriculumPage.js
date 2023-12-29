@@ -35,41 +35,44 @@ const Curriculumpage = () => {
       >
         <div className="lg:mt-[16rem] lg:flex flex-col">
           <p
-            className="mx-6 lg:ml-[18rem] text-2xl text-white font- normal lg:pt-0 pt-[12rem]"
+            className="mx-6 lg:ml-[18rem] xl:ml-[9.7rem] 2xl:ml-[29.8rem] text-2xl text-white font- normal lg:pt-0 pt-[12rem]"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             Curriculum
           </p>
         </div>
       </div>
-      <div className="lg:items-center lg:justify-center lg:text-center lg:flex lg:flex-col">
-        <div className="mx-[2rem] md:mx-[2.5rem] lg:w-[63rem] lg:text-justify lg:mt-[4rem]  mt-[2rem] ">
+      <div className="lg:items-center lg:ml-[3rem] lg:justify-center lg:text-center lg:flex lg:flex-col">
+        <div className="mx-[2rem] md:mx-[2.5rem] lg:w-[63rem] lg:text-justify lg:mt-[4rem] mt-[2rem] ">
           {slidesData?.Published && slidesData?.Description ? (
             `${slidesData?.Description}`
           ) : (
             <>
-              <p
-                className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                Curriculum is the set of experiences, activities and events,
-                direct or indirect which occur in an environment specially
-                planned to foster children's learning and development. In simple
-                terms, Curriculum is a plan for learning.
+              <div className="hidden lg:flex">
+                <div className="w-2 bg-[red] rounded-lg mr-4" /> 
                 <p
-                  className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal lg:mt-0 mt-[1rem]"
+                  className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  Our curriculum is a comprehensive child-centric curriculum
-                  that comes with set objectives in all major areas of
-                  development. It is related to the child's developmental
-                  readiness, interests, questions, style of learning and the
-                  cultural context in which the child finds himself.
+                  Curriculum is the set of experiences, activities and events,
+                  direct or indirect which occur in an environment specially
+                  planned to foster children's learning and development. In
+                  simple terms, Curriculum is a plan for learning.
+                  <p
+                    className="lg:text-[#000] text-[#62677F] lg:text-base text-lg font-normal lg:mt-0 mt-[1rem]"
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    Our curriculum is a comprehensive child-centric curriculum
+                    that comes with set objectives in all major areas of
+                    development. It is related to the child's developmental
+                    readiness, interests, questions, style of learning and the
+                    cultural context in which the child finds himself.
+                  </p>
                 </p>
-              </p>
+              </div>
               <div className="flex flex-col lg:mt-[2rem] mt-[2rem]">
                 <h1
-                  className="lg:text-[#000] text-[#1B1E2B] font-bold text-3xl "
+                  className="lg:text-[#000] text-[#1B1E2B] font-bold text-3xl mb-8 "
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   THE ENVIRONMENT
@@ -95,7 +98,7 @@ const Curriculumpage = () => {
               </div>
               <div className="flex flex-col lg:mt-[2rem] mt-[2rem]">
                 <h1
-                  className="lg:text-[#000] text-[#1B1E2B] font-bold text-3xl "
+                  className="lg:text-[#000] text-[#1B1E2B] font-bold text-3xl mb-8"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   WHAT WILL MY CHILD WILL DO?{" "}
@@ -122,7 +125,7 @@ const Curriculumpage = () => {
               </div>
               <div className="flex flex-col lg:mt-[2rem] mt-[2rem]">
                 <h1
-                  className="text-[#000] font-bold text-3xl "
+                  className="text-[#000] font-bold text-3xl mb-8"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   CLASSROOMS
@@ -134,7 +137,7 @@ const Curriculumpage = () => {
                   <p>
                     Our classrooms is organized into following areas of learning{" "}
                     <br />
-                    <p className="lg:mt-0 mt-[1rem]">
+                    <p className="lg:mt-0 mt-[1rem] mb-[6rem]">
                       1) Language Area <br /> 2) Art Corner <br /> 3) Cognitive
                       Corner
                       <br /> 4) Senso motor skills <br /> 5) EPL (Exercises of

@@ -65,7 +65,7 @@ const Team = () => {
 
   return (
     <>
-      <div className="bg-[#267EC4] lg:mt-[4rem] lg:h-[35rem] mt-[2rem]">
+      <div className="bg-[#267EC4] lg:mt-[4rem] lg:h-[45rem] mt-[2rem]">
         <div className="flex flex-col items-center space-y-2">
           <p
             className=" hidden lg:flex lg:text-base text-xl font-bold lg:font-medium text-white lg:pt-[4rem] pt-[2rem]"
@@ -74,7 +74,7 @@ const Team = () => {
             Our Team members
           </p>
           <h1
-            className=" hidden lg:flex text-base text-center text-white lg:text-xl lg:font-bold lg:mt-0 mt-[2rem]"
+            className=" hidden lg:flex text-base text-center text-white lg:text-4xl lg:font-bold lg:mt-0 mt-[2rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Guiding the way to vibrant creativity and <br />
@@ -83,7 +83,7 @@ const Team = () => {
         </div>
         {/* for mobile */}
 
-        <div className="hidden lg:flex  flex-wrap justify-center lg:mt-[2rem] mt-[2rem]">
+        <div className="hidden lg:flex flex-wrap justify-center xl:mt-[3rem] xl:ml-[3.8rem] 2xl:ml-[4rem] mt-[2rem]">
           {activities.map((activity) => (
             <div
               key={activity.id}
@@ -92,7 +92,7 @@ const Team = () => {
               <img
                 src={activity.Photos}
                 alt={activity.Name}
-                className="w-[14rem] rounded-t-lg h-[10rem] "
+                className="w-[20rem] rounded-t-lg h-[14rem]"
               />
               <div className="p-3">
                 <h1 className="text-xl text-[#000] font-open-sans font-semibold">

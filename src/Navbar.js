@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useActingStore } from "./store/useActingStore.js";
 import { Link } from "react-router-dom";
@@ -30,28 +30,44 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`lg:font-englebert font-opensans w-full lg:w-full lg:left-0 xl:left-0 fixed z-50 px-6 items-center text-center font-medium py-4 top-0 space-x-32  flex flex-wrap lg:justify-center xl:justify-center 2xl:justify-center md:justify-between justify-between`}
+        className={`lg:font-englebert font-opensans w-full lg:w-full lg:left-0 xl:left-0 fixed z-50 px-6 items-center text-center font-medium py-4 top-0 space-x-0  flex flex-wrap lg:justify-center xl:justify-center 2xl:justify-center md:justify-between justify-between`}
         style={{
           background: "#FFF",
           //boxShadow: "0px 3.84141px 20.35947px 0px rgba(5, 104, 236, 0.13)",
         }}
       >
-        <Link to="/" onClick={() => handleNavClick("Home")}>
-          {!isMobileMenuOpen && (
-            <img
-              className="w-[5rem] h-[3.35rem] lg:ml-[6rem] ml-[1rem] md:ml-[2.5rem]"
-              src="/prelogo.svg"
-              alt="logo"
-            />
-          )}
-        </Link>
-
+        <div className="lg:hidden">
+          <Link to="/" onClick={() => handleNavClick("Home")}>
+            {!isMobileMenuOpen && (
+              <img
+                className="w-[5rem] h-[3.35rem] 2xl:mr-[2rem] xl:mr-[2rem] lg:ml-[4rem] ml-[1rem] md:ml-[2.5rem]"
+                src="/prelogo.svg"
+                alt="logo"
+              />
+            )}
+          </Link>
+        </div>
         {/* Desktop Menu */}
-        <div className="hidden lg:flex  lg:items-center justify-center text-[#000]  font-normal text-center text-lg space-x-20">
+
+        <div className="hidden lg:flex lg:items-center justify-center text-[#000] font-normal text-center text-lg 2xl:space-x-20 xl:space-x-20">
+          <Link to="/" onClick={() => handleNavClick("Home")}>
+            {!isMobileMenuOpen && (
+              <img
+                className="w-[5rem] h-[3.35rem] 2xl:mr-[2rem] xl:mr-[2rem] lg:ml-[4rem] ml-[1rem] md:ml-[2.5rem]"
+                src="/prelogo.svg"
+                alt="logo"
+              />
+            )}
+          </Link>
+
           <Link
             to="/"
             onClick={() => handleNavClick("Home")}
-            className={formatPath === "" ? "text-[#FC0101]" : ""}
+            className={
+              formatPath === ""
+                ? "text-[#FC0101] border-[#FC0101] border-b-2"
+                : ""
+            }
           >
             Home
           </Link>
@@ -60,7 +76,9 @@ const Navbar = () => {
             to="/About"
             onClick={() => handleNavClick("About")}
             className={
-              formatPath.toLowerCase() === "about" ? "text-[#FC0101]" : ""
+              formatPath.toLowerCase() === "about"
+                ? "text-[#FC0101] border-[#FC0101] border-b-2"
+                : "text-[#5BE4A0]"
             }
           >
             About us
@@ -70,7 +88,9 @@ const Navbar = () => {
             to="/Admissions"
             onClick={() => handleNavClick("Admissions")}
             className={
-              formatPath.toLowerCase() === "admissions" ? "text-[#FC0101]" : ""
+              formatPath.toLowerCase() === "admissions"
+                ? "text-[#FC0101] border-[#FC0101] border-b-2"
+                : "text-[#634ED6]"
             }
           >
             Admissions
@@ -80,7 +100,9 @@ const Navbar = () => {
             to="/Program"
             onClick={() => handleNavClick("Program")}
             className={
-              formatPath.toLowerCase() === "program" ? "text-[#FC0101]" : ""
+              formatPath.toLowerCase() === "program"
+                ? "text-[#FC0101] border-[#FC0101] border-b-2"
+                : "text-[#10B6FE]"
             }
           >
             Programs
@@ -91,15 +113,15 @@ const Navbar = () => {
             onClick={() => handleNavClick("Curriculumpage")}
             className={
               formatPath.toLowerCase() === "curriculumpage"
-                ? "text-[#FC0101]"
-                : ""
+                ? "text-[#FC0101] border-[#FC0101] border-b-2"
+                : "text-[#89D916]"
             }
           >
             Curriculum
           </Link>
           <Link to="/Contact" onClick={() => handleNavClick("Contact")}>
             <button
-              className="rounded-full px-6 py-2 text-white  bg-[#FD0101] text-center text-base font-bold"
+              className="rounded-full px-6 py-2 text-white bg-[#FD0101] text-center 2xl:ml-[1rem] xl:ml-[1.5rem] text-base font-bold"
               style={{ boxShadow: "0px 8px 27.7px 0px rgba(253, 1, 1, 0.56)" }}
             >
               Contact us

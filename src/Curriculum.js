@@ -60,22 +60,22 @@ const Curriculum = () => {
     const pointsArray = item?.points?.split(",").map((point) => point.trim());
     return (
       <div
-        className={`lg:flex lg:mx-4 flex-col lg:justify-between xl:w-[20rem] lg:w-[19rem] lg:ml-[2rem] w-full ${item.bgColor} rounded-lg shadow-md text-white `}
+        className={`lg:flex flex-col lg:justify-between xl:w-[20rem] lg:w-[19rem] lg:ml-[2rem] w-full ${item.bgColor} rounded-lg shadow-md text-white `}
       >
         <div className="pt-2 pl-2">
           <img
             src={item.imgSrc}
             alt={item.heading}
-            className="w-12 h-12 mt-[1rem] mb-4 ml-2 "
+            className="w-12 h-12 mt-[1rem] mb-4 ml-3"
           />
           <h3
-            className="ml-2 text-3xl font-normal mb-4"
+            className="ml-2 text-3xl font-normal mb-4 2xl:p-2"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             {item.heading}
           </h3>
           <p
-            className="text-sm text-[#fff] font-normal ml-2  md:w-[40rem] lg:w-[18rem]"
+            className="text-sm text-[#fff] font-normal ml-2 md:w-[40rem] lg:w-[18rem] 2xl:p-2"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {item.description}
@@ -108,20 +108,18 @@ const Curriculum = () => {
         </h1>
         <div>
           <p
-            className="lg:text-sm mx-[2.5rem] mb-[2rem] text-base font-medium text-justify lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[66rem] lg:w-[60rem] md:w-[40rem] md:mx-[4rem]"
+            className="lg:text-sm xl:ml-[3rem] 2xl:ml-[3.2rem] mx-10 mb-[2rem] text-base font-medium text-justify xl:text-center 2xl:text-center lg:text-black text-[#62677F] mt-[0.8rem] xl:w-[65rem] 2xl:w-[65rem] lg:w-fit md:w-[40rem] md:mx-[4rem]"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Our curriculum is a comprehensive child-centric curriculum that
-            comes with set objectives in all major areas of development.
-            <p className="justify-center mt-4 lg:mt-0">
-              It is related to the child's developmental readiness, interests,
-              questions, style of learning and the cultural context in which the
-              child finds themselves.
-            </p>
+            comes with set objectives in all major areas of development. It is
+            related to the child's developmental readiness, interests,
+            questions, style of learning and the cultural context in which the
+            child finds themselves.
           </p>
         </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] lg:gap-0 lg:mx-0 md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-[20rem] 2xl:ml-[27rem] lg:ml-[2rem] md:w-[42rem] md:ml-[3rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] lg:gap-0 lg:mx-0 md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-[18rem] 2xl:ml-[38.4rem] lg:ml-[2rem] md:w-[42rem] md:ml-[3rem]">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}

@@ -3,26 +3,24 @@ import React from "react";
 const Journey = () => {
   return (
     <>
-      <div className="flex lg:justify-center md:justify-center lg:space-x-1 xl:space-x-14 lg:mt-[7rem] xl:ml-[1rem]">
-        <div>
-          <div className="hidden lg:flex">
-            <img
-              className="lg:w-[32rem] lg:h-[30rem] object-contain lg:ml-[3rem]"
-              src="image1.svg"
-              alt="i"
-            />
-          </div>
+      <div className="flex lg:justify-center md:justify-center lg:space-x-1 xl:space-x-14 lg:mt-[7rem] xl:ml-[2.7rem] 2xl:ml-[1.2rem]">
+        <div className="hidden lg:flex">
+          <img
+            className="w-[33.45rem] h-[31.2rem] object-cover lg:ml-[3rem] 2xl:ml-[5rem]"
+            src="image1.svg"
+            alt="i"
+          />
         </div>
         <div className="flex flex-col lg:w-[34rem] w-[30rem] md:w-[48rem] lg:mt-8 mt-[2rem] space-y-2 ">
-          <div className="mx-[2.7rem] md:mx-[3rem] lg:mx-0">
+          <div className="mx-[2.7rem] xl:w-[29rem] lg:w-[29rem]  md:mx-[3rem] lg:mx-0 2xl:mx-0 2xl:text-left">
             <p
-              className="text-[#FC0101] lg:text-base text-lg md:text-center font-bold mt-4 mb-3"
+              className="text-[#FC0101] lg:text-base text-lg md:text-center xl:text-start font-bold mt-4 mb-3"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               What we offer
             </p>
             <h1
-              className="text-[#2177C0] lg:text-3xl text-2xl md:text-center font-extrabold mb-2"
+              className="text-[#2177C0] lg:text-[2.25rem] xl:text-[2.25rem] xl:text-start leading-[2.5rem] 2xl:text-[2rem] text-2xl md:text-center font-extrabold mb-2"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               A Journey from Playful <br />
@@ -50,6 +48,7 @@ const Journey = () => {
               <label className="inline-flex items-center">
                 <input
                   type="checkbox"
+                  checked
                   className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
@@ -60,6 +59,8 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2">
                 <input
                   type="checkbox"
+                  checked
+
                   className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
@@ -71,6 +72,8 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2">
                 <input
                   type="checkbox"
+                  checked
+
                   className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
@@ -81,6 +84,8 @@ const Journey = () => {
               <label className="inline-flex items-center mt-2 pl-[0.4rem] lg:pl-0">
                 <input
                   type="checkbox"
+                  checked
+
                   className="rounded form-checkbox accent-[#FC0101]"
                 />
                 <span className="ml-2 text-lg text-black lg:text-base">
@@ -90,7 +95,7 @@ const Journey = () => {
             </div>
           </div>
           <div>
-            <button className="hidden lg:flex rounded-full px-6 py-2 mt-[2rem] text-white bg-[#FD0101] text-center lg:text-base  text-lg font-semi-bold">
+            <button className="hidden lg:flex rounded-full px-6 py-2 mt-[3.3rem] text-white bg-[#FD0101] text-center lg:text-base  text-lg font-semi-bold">
               Contact us
             </button>
           </div>
