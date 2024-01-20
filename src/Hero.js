@@ -127,7 +127,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col space-y-4 2xl:w-[64.8rem] 2xl:ml-[29.5rem] mt-[2rem] lg:mt-[4rem] lg:flex-row lg:space-y-0 mx-[2rem] lg:ml-[3.5rem] xl:ml-[9.5rem] md:space-x-0 md:items-baseline md:flex-row md:mx-0 md:ml-[4rem] md:gap-2  ">
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mx-[2rem] md:mx-auto mt-[2rem] md:mt-[4rem] justify-center items-center">
         <div className="flex flex-row space-x-6 lg:space-x-2 md:space-x-4 lg:mt-0 mt-[2rem]">
           <div className="flex justify-center items-center w-[7rem] h-[4rem] lg:w-[4rem] lg:h-[4rem] md:w-[3rem] md:h-[3rem] md:mr-3 mx-auto bg-[#FFF4E4] rounded-full ">
             <div>

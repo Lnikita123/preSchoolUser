@@ -69,7 +69,7 @@ const Curriculum = () => {
             className="w-12 h-12 mt-[1rem] mb-4 ml-3"
           />
           <h3
-            className="ml-2 text-3xl font-normal mb-4 2xl:p-2"
+            className="mb-4 ml-2 text-3xl font-normal 2xl:p-2"
             style={{ fontFamily: "Englebert, cursive" }}
           >
             {item.heading}
@@ -119,7 +119,7 @@ const Curriculum = () => {
           </p>
         </div>
       </div>
-      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] lg:gap-0 lg:mx-0 md:mx-10 mt-[4rem] lg:flex xl:justify-center xl:ml-[18rem] 2xl:ml-[38.4rem] lg:ml-[2rem] md:w-[42rem] md:ml-[3rem]">
+      <div className="hidden sm:grid sm:grid-cols-3 sm:gap-0 md:grid md:grid-cols-1 md:gap-[4rem] lg:gap-0 lg:mx-0 md:mx-10 mt-[4rem] lg:flex lg:justify-center">
         {data.map((item) => (
           <CardComponent key={item.id} item={item} />
         ))}

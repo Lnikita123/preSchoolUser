@@ -18,7 +18,7 @@ function App() {
     <>
       <Router>
         <ToastContainer className="!z-[9999]" />
-        <div className="flex flex-col lg:items-center ">
+        <div className="flex flex-col overflow-x-hidden lg:items-center ">
           <Navbar />
           <div
             className={`${
