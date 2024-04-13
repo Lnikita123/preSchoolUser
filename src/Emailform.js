@@ -10,6 +10,22 @@ const Emailform = () => {
   const [age, setAge] = useState("");
   const [parentname, setparentName] = useState("");
   async function saveUserData(e) {
+    if (!name.trim() || !number.trim() || !email.trim() || !age.trim() || !parentname.trim()) {
+      return toast.error("All fields are required");
+    }
+    if (!/^\d{10}$/.test(number)) {
+      return toast.error("Phone number must be numeric and exactly 10 digits");
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return toast.error("Please enter a valid email address");
+    }
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(name) || !nameRegex.test(name)) {
+      return toast.error("Name  must contain only letters");
+    }
+
     try {
       const payload = {
         Name: name,
@@ -53,14 +69,14 @@ const Emailform = () => {
 
   const desktopStyles = isDesktop
     ? {
-        background: "rgba(255, 255, 255, 0.50)",
-        backdropFilter: "blur(11.399999618530273px)",
-      }
+      background: "rgba(255, 255, 255, 0.50)",
+      backdropFilter: "blur(11.399999618530273px)",
+    }
     : {};
   return (
     <>
       <div className=" hidden lg:flex bg-[#1E79C2] lg:mt-[4rem] mt-[4rem]">
-        <div className="flex flex-row items-center 2xl:space-x-16 space-y-8">
+        <div className="flex flex-row items-center space-y-8 2xl:space-x-16">
           <div>
             <img className="w-[9rem] h-[7rem] mt-[-11rem] xl:mr-3 2xl:ml-[12.3rem] " src="7.svg" alt="i" />
           </div>
@@ -156,10 +172,10 @@ const Emailform = () => {
                   }}
                 >
                   <option className="text-black">Child Age</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>0-5 yr</option>
+                  <option>5-10 yr</option>
+                  <option>10-15 yr</option>
+                  <option>15-20 yr</option>
                 </select>
                 <input
                   type="text"
@@ -256,10 +272,10 @@ const Emailform = () => {
               style={{ background: " rgba(255, 255, 255, 0.50)" }}
             >
               <option className="text-black">Child Age</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
+              <option>0-5 yr</option>
+              <option>5-10 yr</option>
+              <option>10-15 yr</option>
+              <option>15-20 yr</option>
             </select>
 
             <input

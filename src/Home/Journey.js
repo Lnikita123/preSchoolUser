@@ -95,9 +95,11 @@ const Journey = () => {
             </div>
           </div>
           <div>
-            <button className="hidden lg:flex rounded-full px-6 py-2 mt-[3.3rem] text-white bg-[#FD0101] text-center lg:text-base  text-lg font-semi-bold">
-              Contact us
-            </button>
+            <a href="/Contact" target="_blank" >
+              <button className="hidden lg:flex rounded-full px-6 py-2 mt-[3.3rem] text-white bg-[#FD0101] text-center lg:text-base  text-lg font-semi-bold">
+                Contact us
+              </button>
+            </a>
           </div>
         </div>
       </div>

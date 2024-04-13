@@ -27,7 +27,7 @@ const Creative = () => {
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[3rem] lg:mx-0 mx-[1rem] lg:mt-0">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl flex lg:w-16 lg:h-10 w-32 h-16 md:w-16 md:h-14  ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
+                className="object-contain w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
                 src="/bulb.png"
                 alt="i"
               />
@@ -51,7 +51,7 @@ const Creative = () => {
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16 md:w-16 md:h-14  ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
+                className="object-contain w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
                 src="/draw.svg"
                 alt="i"
               />
@@ -81,7 +81,9 @@ const Creative = () => {
                 <br /> Guidance? Schedule a<br /> Consultation!
               </h1>
               <p className="mt-[1.4rem] font-bold text-lg text-[#1BBF68]">
-                <span className="border-b border-[#1BBF68]">Contact Us</span>
+                <a href="/Contact" target="_blank">
+                  <span className="border-b border-[#1BBF68]">Contact Us</span>
+                </a>
               </p>
             </div>
             <div className="absolute top-[-8rem] right-0 z-0 ">
@@ -92,7 +94,7 @@ const Creative = () => {
           <div className="flex flex-row lg:flex-col lg:w-[20rem] lg:space-y-4 space-x-4  lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16 md:w-16 md:h-14  ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
+                className="object-contain w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
                 src="/digital.svg"
                 alt="i"
               />
@@ -116,7 +118,7 @@ const Creative = () => {
           <div className="flex flex-row lg:flex-col  lg:w-[17rem] xl:w-[20rem] lg:space-y-4 space-x-4 mt-[2rem] lg:mt-0 lg:mx-0 mx-[1rem]">
             <div className="lg:bg-white bg-[#FFF4E4] rounded-xl  flex lg:w-16 lg:h-10 w-32 h-16  md:w-16 md:h-14 ">
               <img
-                className="w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12 object-contain"
+                className="object-contain w-16 h-10 mt-2 lg:mt-0 lg:w-12 lg:h-12"
                 src="/cognition.svg"
                 alt="i"
               />
